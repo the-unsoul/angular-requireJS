@@ -1,0 +1,199 @@
+/*
+////////////////////////////////////////////////////////
+// Html5 template using HTML5boilerplate + foundation //
+// Created and store by Unsoul                        //
+// Email: duylinh20032003@yahoo.com                   //
+////////////////////////////////////////////////////////
+*/
+$swift-ease-out: cubic-bezier(0.25, 0.8, 0.25, 1);
+$swift-ease-in: cubic-bezier(0.55, 0, 0.55, 0.2);
+$swift-ease-in-out: cubic-bezier(0.35, 0, 0.25, 1);
+
+@import "functions";
+$ico : 'icomoon';
+
+// @font-face {
+//    font-family: 'icomoon';
+//    src: url("fonts/icomoon.eot");
+//    src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon.woff") format("woff"), url("fonts/icomoon.ttf") format("truetype"), url("fonts/icomoon.svg#icomoon") format("svg");
+//    font-weight: normal;
+//    font-style: normal;
+// }
+
+// @font-face {
+//    font-family: 'fontName';
+//    src: url("fonts/fontName.eot");
+//    src: url("fonts/fontName.eot?#iefix") format("embedded-opentype"), url("fonts/fontName.woff") format("woff"), url("fonts/fontName.ttf") format("truetype"), url("fonts/fontName.svg#fontName") format("svg");
+//    font-weight: normal;
+//    font-style: normal;
+// }
+
+/* 
+==========================================================================
+   Author's custom styles
+========================================================================== 
+*/
+
+
+
+/* 
+==========================================================================
+   Foundation fixs
+========================================================================== 
+*/
+
+.no-js .tabs-content > .content.active{
+   display: block;
+}
+.no-js .tabs-content>.content{
+   display: none;
+}
+
+/* 
+==========================================================================
+   Media Queries
+========================================================================== 
+*/
+
+@media only screen and (min-width: 35em) {}
+
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {}
+
+/* 
+==========================================================================
+   Helper classes
+========================================================================== 
+*/
+.company{ color: #fff;}
+.company:hover {color: #f87a0f;}
+.ir {
+   background-color: transparent;
+   border: 0;
+   overflow: hidden;
+   *text-indent: -9999px;
+   &:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 150%;
+   }
+}
+
+.hidden {
+   display: none !important;
+   visibility: hidden;
+}
+
+.visuallyhidden {
+   border: 0;
+   clip: rect(0 0 0 0);
+   height: 1px;
+   margin: -1px;
+   overflow: hidden;
+   padding: 0;
+   position: absolute;
+   width: 1px;
+   &.focusable {
+      &:active, &:focus {
+         clip: auto;
+         height: auto;
+         margin: 0;
+         overflow: visible;
+         position: static;
+         width: auto;
+      }
+   }
+}
+
+.invisible {
+   visibility: hidden;
+}
+
+.clearfix {
+   &:before {
+      content: " ";
+      display: table;
+   }
+   &:after {
+      content: " ";
+      display: table;
+      clear: both;
+   }
+   *zoom: 1;
+}
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+a{
+   text-decoration: none;
+}
+.fullWidth {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+}
+/* 
+==========================================================================
+   Print styles
+========================================================================== 
+*/
+
+@media print {
+   * {
+      background: transparent !important;
+      color: #000 !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+   }
+   a {
+      text-decoration: underline;
+      &:visited {
+         text-decoration: underline;
+      }
+      &[href]:after {
+         content: " (" attr(href) ")";
+      }
+   }
+   abbr[title]:after {
+      content: " (" attr(title) ")";
+   }
+   .ir a:after {
+      content: "";
+   }
+   a {
+      &[href^="javascript:"]:after, &[href^="#"]:after {
+         content: "";
+      }
+   }
+   pre, blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+   }
+   thead {
+      display: table-header-group;
+   }
+   tr {
+      page-break-inside: avoid;
+   }
+   img {
+      page-break-inside: avoid;
+      max-width: 100% !important;
+   }
+   @page {
+      margin: .5cm;
+   }
+
+   p, h2, h3 {
+      orphans: 3;
+      widows: 3;
+   }
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
