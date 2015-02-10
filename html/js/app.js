@@ -1,6 +1,6 @@
-define(['angularAMD', 'angular-route'], function(angularAMD) {
+define(['angularAMD', 'angular-route', 'ui-grid'], function(angularAMD) {
   var app;
-  app = angular.module('angularTest', ['ngRoute']);
+  app = angular.module('angularTest', ['ngRoute', 'ui.grid']);
   app.config(function($routeProvider) {
     return $routeProvider.when("/home", angularAMD.route({
       templateUrl: 'views/home.html',
@@ -9,7 +9,7 @@ define(['angularAMD', 'angular-route'], function(angularAMD) {
       templateUrl: 'views/login.html',
       controller: 'loginCtrl'
     })).when("/grid", angularAMD.route({
-      templateUrl: 'views/grid-ui.html',
+      templateUrl: 'views/grid.html',
       controller: 'gridCtrl'
     })).otherwise({
       redirectTo: '/home'
@@ -50,15 +50,13 @@ define(['angularAMD', 'angular-route'], function(angularAMD) {
       });
       $scope.$watch('currentUser', function(newValue) {
         if (newValue.length > 0) {
-          $scope.loggedIn = true;
+          return $scope.loggedIn = true;
         }
-        return console.log($scope.loggedIn);
       });
       return $scope.$watch('loggedIn', function(newValue) {
         if (newValue) {
-          $scope.loginButton = 'Logout';
+          return $scope.loginButton = 'Logout';
         }
-        return console.log($scope.loginButton);
       });
     }
   ]);

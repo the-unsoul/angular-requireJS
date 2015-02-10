@@ -4,16 +4,18 @@ requirejs.config
 		# deps
 		jquery          : 'jquery-1.11.1.min'
 		angular         : 'angular/angular'
-		angularAMD      : 'requirejs/angularAMD'
+		angularAMD      : 'requirejs/angularAMD.min'
 		underscore      : 'underscore-min'
-		'angular-route' : 'angular/angular-route'
-		'ui-grid'       : '../ui-grid/ui-grid.min'
+		'angular-route' : 'angular/angular-route.min'
+		'ui-grid'       : 'uigrid/ui-grid.min'
 		foundation      : '../foundation.min'
 		app             : '../app'
+		ngload          : 'requirejs/ngload.min'
 
 		# controllers
 		testCtrl        : '../controllers/testCtrl'
 		loginCtrl       : '../controllers/loginCtrl'
+		gridCtrl		: '../controllers/gridCtrl'
 
 
 	shim:
@@ -21,7 +23,7 @@ requirejs.config
 		angular         : ['underscore']
 		angularAMD      : ['angular']
 		'angular-route' : ['angular']
-		'ui-grid'       : ['angular']
+		'ui-grid'      	: ['angular']
 		jquery:
 			exports: '$'
 		underscore:
@@ -29,7 +31,7 @@ requirejs.config
 	# kick start app
 	deps: ['app']
 
-# require ['foundation', 'app'], (foundation, app) ->
-# 	$(document).foundation()
+require ['foundation'], (foundation) ->
+	$(document).foundation()
 
 

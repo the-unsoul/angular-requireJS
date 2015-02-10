@@ -1,7 +1,7 @@
-define ['angularAMD', 'angular-route'],(angularAMD) ->
+define ['angularAMD', 'angular-route', 'ui-grid'],(angularAMD) ->
 	
 	# [A]ngular
-	app = angular.module 'angularTest', ['ngRoute']
+	app = angular.module 'angularTest', ['ngRoute', 'ui.grid']
 
 	app.config ($routeProvider)->
 		$routeProvider
@@ -12,7 +12,7 @@ define ['angularAMD', 'angular-route'],(angularAMD) ->
 			templateUrl: 'views/login.html'
 			controller: 'loginCtrl'
 		.when "/grid", angularAMD.route
-			templateUrl: 'views/grid-ui.html'
+			templateUrl: 'views/grid.html'
 			controller: 'gridCtrl'
 		.otherwise
 			redirectTo: '/home'
@@ -53,46 +53,10 @@ define ['angularAMD', 'angular-route'],(angularAMD) ->
 		$scope.$watch 'currentUser', (newValue) ->
 			if newValue.length > 0
 				$scope.loggedIn = true
-			console.log($scope.loggedIn)
 		$scope.$watch 'loggedIn', (newValue) ->
 			if newValue
 				$scope.loginButton = 'Logout'
-			console.log($scope.loginButton)
 
 	]
 
 	angularAMD.bootstrap app
-
-
-
-	# app.controller 'testCtrl', 
-	# ['$scope', ($scope)->
-	# 	$scope.username = 'requireJS + angularJS'
-	# 	$scope.todos = [
-	# 		name: "testing with coffee script" 
-	# 		done: true	
-	# 	,
-	# 		name: 'make a fine template engine'
-	# 		done: true
-	# 	,
-	# 		name: 'make it run'
-	# 		done: true
-	# 	]
-	# 	$scope.t_length = ->
-	# 		$scope.todos.length
-
-	# 	$scope.newTodo = ''
-	# 	$scope.addTodo = ->
-	# 		if $scope.newTodo == '' 
-	# 			return
-	# 		$scope.todos.push(
-	# 			name: $scope.newTodo
-	# 			done: false
-	# 		)
-	# 		$scope.newTodo = ''
-
-	# 	$scope.removeDone = ->
-	# 		$scope.todos = _.filter $scope.todos, (todo)->
-	# 			todo.done == false
-
-	# ]
