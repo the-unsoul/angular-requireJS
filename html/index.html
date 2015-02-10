@@ -4,7 +4,7 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title></title>
+   <title>AnguarAMD</title>
    <meta name="description" content="">
    <link rel="stylesheet" href="css/normalize.min.css">
    <link rel="stylesheet" href="css/foundation.min.css" />
@@ -34,10 +34,40 @@
 <!--[if lt IE 8]>
    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-   
+
 <!-- Content start! -->
-   <div data-ng-view></div>
+<nav class="top-bar" data-topbar data-ng-controller="homeCtrl">
+    <ul class="title-area">
+        <li class="name">
+            <h1><a href="https://github.com/the-unsoul/angular-requireJS">Angular + Require JS</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a>Menu</a>
+        </li>
+    </ul>
+
+    <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+            <li class="{{isActive('/home')}}">
+                <a  href="#/home">Home</a>
+            </li>
+            <li class="{{isActive('/login')}}">
+                <a href="#/login" data-ng-cloak>{{loginButton}}</a>
+            </li>
+            <li class="{{isActive('/grid')}}">
+                <a href="#/grid">Angular UI Grid</a>
+            </li>
+        </ul>
+
+        <ul class="left" data-ng-cloak>
+          <li><a data-ng-click="logIt()">Username: </a></li>
+          <li><a><b>{{currentUser}}</b></a></li>
+        </ul>
+    </section>
+</nav>
+<div data-ng-view></div>
 <!-- Content end! -->
+
    
 
    

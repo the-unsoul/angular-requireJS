@@ -1,49 +1,23 @@
 <div class="row">
-      <div class="small-12 columns"  ng-controller="testCtrl" data-ng-cloak>
-         <input type="text" name="uname" id="" data-ng-model="username">
-         <h2>{{username}}</h2>
-         <h3>
-            The total todo(s) we have: <b>{{t_length()}}</b>
-         </h3>
-         
-         <div class="large-6 columns">
-            <ul>
-
-               <li data-ng-repeat="(key, todo) in todos">
-                  <input  type="checkbox" name="done" id="{{key}}" data-ng-model="todo.done">
-                  <label for="{{key}}" class="ng-done-{{todo.done}}">{{todo.name}}</label>
-               </li>
-            </ul>
-            <input type="text" name="addTodo" id="" data-ng-model="newTodo">
-            <input type="button" value="Add todo" class="button" data-ng-click="addTodo()">
-            <input type="button" value="remove Dones" class="button" data-ng-click="removeDone()">
-         </div>
-      </div>
-   </div>
-   <div class="row" >
+   <div class="small-12 columns"  ng-controller="testCtrl" data-ng-cloak>
+      <input type="text" name="uname" id="" data-ng-model="appName">
+      <h2>{{appName}}</h2>
+      <h3>
+         The total todo(s) we have: <b>{{t_length()}}</b>
+      </h3>
+      
       <div class="large-6 columns">
-         <h1>login form demo:</h1>
-         <div class="row collapse prefix-radius">
-            <div class="small-2 columns">
-               <span class="prefix">username</span>
-            </div>
-            <div class="small-10 columns">
-               <input type="text" name="username" id="username" value="admin">
-            </div>
-         </div>
-         <div class="row collapse prefix-radius">
-            <div class="small-2 columns">
-               <span class="prefix">password</span>
-            </div>
-            <div class="small-10 columns">
-               <input type="password" name="password" value="admin" id="password">
-            </div>
-         </div>
-         <div class="row" data-ng-controller="loginCtrl as login">
-            <div class="small-6 columns">
-               <input type="button" class="button" value="Login" data-ng-
-               click="login.checkLogin()">
-               <input type="button" class="button" value="clear">
-         </div>
+         <ul>
+
+            <li data-ng-repeat="(key, todo) in todos">
+               <input  type="checkbox" name="done" id="{{key}}" data-ng-model="todo.done">
+               <label for="{{key}}" class="ng-done-{{todo.done}}">{{todo.name}}</label>
+            </li>
+         </ul>
+         <input type="text" name="addTodo" id="" data-ng-model="newTodo">
+         <input type="button" value="Add todo" class="button" data-ng-click="addTodo()">
+         <input type="button" value="remove Dones" class="button" data-ng-click="removeDone()">
       </div>
    </div>
+</div>
+   

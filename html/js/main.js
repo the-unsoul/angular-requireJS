@@ -6,29 +6,20 @@ requirejs.config({
     angularAMD: 'requirejs/angularAMD',
     underscore: 'underscore-min',
     'angular-route': 'angular/angular-route',
+    'ui-grid': '../ui-grid/ui-grid.min',
     foundation: '../foundation.min',
     app: '../app',
     testCtrl: '../controllers/testCtrl',
-    HomeController: '../controllers/home-controller'
+    loginCtrl: '../controllers/loginCtrl'
   },
   shim: {
-    angular: {
-      deps: ['underscore'],
-      exports: 'angular'
-    },
-    'angular-route': {
-      deps: ['angular']
-    },
-    angularAMD: {
-      deps: ['angular'],
-      exports: 'angularAMD'
-    },
+    foundation: ['jquery'],
+    angular: ['underscore'],
+    angularAMD: ['angular'],
+    'angular-route': ['angular'],
+    'ui-grid': ['angular'],
     jquery: {
       exports: '$'
-    },
-    foundation: {
-      deps: ['jquery'],
-      exports: 'foundation'
     },
     underscore: {
       exports: '_'

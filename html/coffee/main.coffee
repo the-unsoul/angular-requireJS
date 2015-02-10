@@ -1,33 +1,32 @@
 requirejs.config
 	baseUrl: "js/vendor"
 	paths: 
-		jquery: 'jquery-1.11.1.min'
-		angular: 'angular/angular'
-		angularAMD: 'requirejs/angularAMD'
-		underscore: 'underscore-min'
-		'angular-route': 'angular/angular-route'
-		foundation: '../foundation.min'
-		app: '../app'
-		testCtrl: '../controllers/testCtrl'
-		HomeController: '../controllers/home-controller'
+		# deps
+		jquery          : 'jquery-1.11.1.min'
+		angular         : 'angular/angular'
+		angularAMD      : 'requirejs/angularAMD'
+		underscore      : 'underscore-min'
+		'angular-route' : 'angular/angular-route'
+		'ui-grid'       : '../ui-grid/ui-grid.min'
+		foundation      : '../foundation.min'
+		app             : '../app'
+
+		# controllers
+		testCtrl        : '../controllers/testCtrl'
+		loginCtrl       : '../controllers/loginCtrl'
+
 
 	shim:
-		angular: 
-			deps: ['underscore']
-			exports: 'angular'
-		'angular-route': 
-			deps: ['angular']
-		angularAMD:
-			deps: ['angular']
-			exports: 'angularAMD'
+		foundation      : ['jquery']
+		angular         : ['underscore']
+		angularAMD      : ['angular']
+		'angular-route' : ['angular']
+		'ui-grid'       : ['angular']
 		jquery:
 			exports: '$'
-		foundation: 
-			deps: ['jquery']
-			exports: 'foundation'
 		underscore:
 			exports: '_'
-	#kick start app
+	# kick start app
 	deps: ['app']
 
 # require ['foundation', 'app'], (foundation, app) ->

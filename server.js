@@ -62,9 +62,9 @@ server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
-
+var colors = require('colors');
 function onListening() {
-  console.log('Listening on port ' + server.address().port);
+  console.log(('Listening on port ' + server.address().port).green.bgWhite);
   debug('Listening on port ' + server.address().port);
 }
 
