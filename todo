@@ -7,6 +7,14 @@ install coffee-sass-ng:
     ✔ angularJS @done (15-01-27 17:28)
     ✔ run together @done (15-01-27 17:28)
     ✔ use ng-cloak directive to prevent Angular HTML template from being briefly displayed @done (15-01-29 11:46)
+  ☐ Authenticate and Authorize
+    ☐ use cookie
+    ☐ use fetch
+    ☐ use tooken @important!
+  ☐ Google map/angular-map
+    --> use define to load map
+  ☐ UI bootstrap
+  ☐ testing fate 2
 
 expert training:      
   ☐ user loging and security

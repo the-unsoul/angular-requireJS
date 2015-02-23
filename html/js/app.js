@@ -1,6 +1,6 @@
-define(['angularAMD', 'angular-route', 'ui-grid'], function(angularAMD) {
+define(['angularAMD', 'angular-route', 'ui-grid', 'ng-map'], function(angularAMD) {
   var app;
-  app = angular.module('angularTest', ['ngRoute', 'ui.grid']);
+  app = angular.module('angularTest', ['ngRoute', 'ui.grid', 'uiGmapgoogle-maps']);
   app.config(function($routeProvider) {
     return $routeProvider.when("/home", angularAMD.route({
       templateUrl: 'views/home.html',
@@ -11,6 +11,9 @@ define(['angularAMD', 'angular-route', 'ui-grid'], function(angularAMD) {
     })).when("/grid", angularAMD.route({
       templateUrl: 'views/grid.html',
       controller: 'gridCtrl'
+    })).when('/map', angularAMD.route({
+      templateUrl: 'views/gmap.html',
+      controller: 'mapCtrl'
     })).otherwise({
       redirectTo: '/home'
     });

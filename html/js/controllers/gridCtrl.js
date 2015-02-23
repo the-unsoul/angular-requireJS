@@ -2,7 +2,7 @@
 * @Author: UnS
 * @Date:   2015-02-10 14:52:21
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-02-10 17:08:25
+* @Last Modified time: 2015-02-12 18:24:00
 */
 
 define(['app'], function(app) {
@@ -30,48 +30,6 @@ define(['app'], function(app) {
 				"firstName" : "Lorraine",
 				"lastName"  : "Wise",
 				"company"   : "Comveyer",
-				"employed"  : false
-		    },
-		    {
-				"firstName" : "Nancy",
-				"lastName"  : "Waters",
-				"company"   : "Fuelton",
-				"employed"  : false
-		    },
-		    {
-				"firstName" : "Nancy",
-				"lastName"  : "Waters",
-				"company"   : "Fuelton",
-				"employed"  : false
-		    },
-		    {
-				"firstName" : "Nancy",
-				"lastName"  : "Waters",
-				"company"   : "Fuelton",
-				"employed"  : false
-		    },
-		    {
-				"firstName" : "Nancy",
-				"lastName"  : "Waters",
-				"company"   : "Fuelton",
-				"employed"  : false
-		    },
-		    {
-				"firstName" : "Nancy",
-				"lastName"  : "Waters",
-				"company"   : "Fuelton",
-				"employed"  : false
-		    },
-		    {
-				"firstName" : "Nancy",
-				"lastName"  : "Waters",
-				"company"   : "Fuelton",
-				"employed"  : false
-		    },
-		    {
-				"firstName" : "Nancy",
-				"lastName"  : "Waters",
-				"company"   : "Fuelton",
 				"employed"  : false
 		    },
 		    {

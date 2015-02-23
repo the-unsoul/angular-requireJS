@@ -56,13 +56,16 @@
                 <a href="#/login" data-ng-cloak>{{loginButton}}</a>
             </li>
             <li class="{{isActive('/grid')}}">
-                <a href="#/grid">Angular UI Grid</a>
+                <a href="#/grid">ng-ui-grid</a>
+            </li>
+            <li class="{{isActive('/map')}}">
+                <a href="#/map">ng-map</a>
             </li>
         </ul>
 
         <ul class="left" data-ng-cloak>
-          <li><a data-ng-click="logIt()">Username: </a></li>
-          <li><a><b>{{currentUser}}</b></a></li>
+            <li><a data-ng-click="logIt()">Username: </a></li>
+            <li><a><b>{{currentUser}}</b></a></li>
         </ul>
     </section>
 </nav>

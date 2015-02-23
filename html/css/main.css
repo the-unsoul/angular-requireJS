@@ -10,6 +10,12 @@
    Author's custom styles
 ========================================================================== 
 */
+.angular-google-map-container {
+  height: 400px; }
+
+#map_canvas img, .gmnoprint img {
+  max-width: none; }
+
 /* 
 ==========================================================================
    Foundation fixs

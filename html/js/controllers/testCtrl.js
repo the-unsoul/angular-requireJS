@@ -2,21 +2,30 @@
 * @Author: UnS
 * @Date:   2015-02-03 10:26:25
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-02-10 10:23:19
+* @Last Modified time: 2015-02-13 16:09:52
 */
 
 define(['app'], function(app) {
 	app.controller('testCtrl', ['$scope', function ($scope) {
 		$scope.appName = 'requireJS + angularJS';
 	 	$scope.todos = [{
-	 		name: "try to upgrade new verson of Angular and RequireJS" ,
+	 		name: "more security research",
+	 		done: false
+	 	},{
+	 		name: "considering UI Bootstrap" ,
+	 		done: false
+	 	},{
+	 		name: "try tests with nesting route",
+	 		done: false
+	 	},{
+	 		name: 'try google map',
 	 		done: true
 	 	},{
-	 		name: 'investigate the compatibility',
+	 		name: 'try chart.js',
 	 		done: true
 	 	},{
 	 		name: 'testing and decided to use it or not',
-	 		done: true
+	 		done: false
 	 	}];
 	 	$scope.t_length =  function () {
 	 		return $scope.todos.length;
