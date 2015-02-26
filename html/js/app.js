@@ -1,23 +1,31 @@
-define(['angularAMD', 'angular-route', 'ui-grid', 'ng-map'], function(angularAMD) {
+define(['angularAMD', 'angular-route', 'ui-grid', 'ng-map', 'angular-resource', 'bootstrap', 'bootstrap-tpls'], function(angularAMD) {
   var app;
-  app = angular.module('angularTest', ['ngRoute', 'ui.grid', 'uiGmapgoogle-maps']);
-  app.config(function($routeProvider) {
-    return $routeProvider.when("/home", angularAMD.route({
-      templateUrl: 'views/home.html',
-      controller: 'testCtrl'
-    })).when("/login", angularAMD.route({
-      templateUrl: 'views/login.html',
-      controller: 'loginCtrl'
-    })).when("/grid", angularAMD.route({
-      templateUrl: 'views/grid.html',
-      controller: 'gridCtrl'
-    })).when('/map', angularAMD.route({
-      templateUrl: 'views/gmap.html',
-      controller: 'mapCtrl'
-    })).otherwise({
-      redirectTo: '/home'
-    });
-  });
+  app = angular.module('angularTest', ['ngRoute', 'ui.grid', 'uiGmapgoogle-maps', 'ngResource', 'ui.bootstrap']);
+  app.config([
+    '$routeProvider', function($routeProvider) {
+      return $routeProvider.when("/home", angularAMD.route({
+        templateUrl: 'views/home.html',
+        controller: 'testCtrl'
+      })).when("/login", angularAMD.route({
+        templateUrl: 'views/login.html',
+        controller: 'loginCtrl'
+      })).when("/grid", angularAMD.route({
+        templateUrl: 'views/grid.html',
+        controller: 'gridCtrl'
+      })).when('/map', angularAMD.route({
+        templateUrl: 'views/gmap.html',
+        controller: 'mapCtrl'
+      })).when('/whoosh', angularAMD.route({
+        templateUrl: 'views/whoosh.html',
+        controller: 'whooshCtrl'
+      })).when('/ui-router', angularAMD.route({
+        templateUrl: 'views/tab.html',
+        controller: 'tabCtrl'
+      })).otherwise({
+        redirectTo: '/home'
+      });
+    }
+  ]);
   app.factory('AppData', function() {
     var data;
     data = {

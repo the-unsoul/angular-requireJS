@@ -1,23 +1,39 @@
 <div class="row">
    <div class="small-12 columns"  ng-controller="testCtrl" data-ng-cloak>
-      <input type="text" name="uname" id="" data-ng-model="appName">
-      <h2>{{appName}}</h2>
-      <h3>
-         The total todo(s) we have: <b>{{t_length()}}</b>
-      </h3>
-      <p>An introduction to <code>angular</code> + <code>requireJS</code> + <code>angularAMD</code></p>
-      <div class="large-6 columns">
-         <ul>
-
-            <li data-ng-repeat="(key, todo) in todos">
-               <input  type="checkbox" name="done" id="{{key}}" data-ng-model="todo.done">
-               <label for="{{key}}" class="ng-done-{{todo.done}}">{{todo.name}}</label>
-            </li>
-         </ul>
-         <input type="text" name="addTodo" id="" data-ng-model="newTodo">
-         <input type="button" value="Add todo" class="button" data-ng-click="addTodo()">
-         <input type="button" value="remove Dones" class="button" data-ng-click="removeDone()">
-      </div>
+      
    </div>
 </div>
-   
+
+<div class="container">
+   <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+         <input class="form-control" type="text" name="uname" id="" data-ng-model="appName">
+         <h2>{{appName}}</h2>
+         <h3>
+            The total todo(s) we have: <b>{{t_length()}}</b>
+         </h3>
+         <p>An introduction to <code>angular</code> + <code>requireJS</code> + <code>angularAMD</code></p>
+         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <ul>
+
+               <li data-ng-repeat="(key, todo) in todos">
+                  <input  type="checkbox" name="done" id="{{key}}" data-ng-model="todo.done">
+                  <label for="{{key}}" class="ng-done-{{todo.done}}">{{todo.name}}</label>
+               </li>
+            </ul>
+            
+
+            <div class="row">
+               <div class="input-group">
+                  <span class="input-group-addon">new Todo name:</span>
+                  <input type="text" name="addTodo" class="form-control" data-ng-model="newTodo">   
+               </div>
+               <br>
+               
+               <button type="button" class="btn btn-primary" data-ng-click="addTodo()">Add todo</button>
+               <button type="button" class="btn btn-default" data-ng-click="removeDone()">remove Dones</button>
+            </div>
+         </div>
+      </div>
+   </div>      
+</div>   

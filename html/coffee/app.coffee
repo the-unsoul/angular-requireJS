@@ -1,9 +1,26 @@
-define ['angularAMD', 'angular-route', 'ui-grid', 'ng-map'],(angularAMD) ->
+define [
+	'angularAMD'
+	'angular-route'
+	'ui-grid'
+	'ng-map'
+	'angular-resource'
+	'bootstrap'
+	'bootstrap-tpls'
+
+],(angularAMD) ->
 	
 	# [A]ngular
-	app = angular.module 'angularTest', ['ngRoute', 'ui.grid', 'uiGmapgoogle-maps']
+	app = angular.module 'angularTest', 
+	[
+		'ngRoute' 
+		'ui.grid' 
+		'uiGmapgoogle-maps' 
+		'ngResource'
+		'ui.bootstrap'
+		
+	]
 
-	app.config ($routeProvider)->
+	app.config ['$routeProvider', ($routeProvider)->
 		$routeProvider
 		.when "/home", angularAMD.route 
 			templateUrl: 'views/home.html'
@@ -17,9 +34,16 @@ define ['angularAMD', 'angular-route', 'ui-grid', 'ng-map'],(angularAMD) ->
 		.when '/map', angularAMD.route
 			templateUrl: 'views/gmap.html'
 			controller: 'mapCtrl'
+		.when '/whoosh', angularAMD.route
+			templateUrl: 'views/whoosh.html'
+			controller: 'whooshCtrl'
+		.when '/ui-router', angularAMD.route
+			templateUrl: 'views/tab.html'
+			controller: 'tabCtrl'
 		.otherwise
 			redirectTo: '/home'
-
+		
+	]
 	# Factory
 	app.factory 'AppData', ->
 		data = currentUser: ''
