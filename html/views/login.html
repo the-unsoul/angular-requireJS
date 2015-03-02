@@ -1,27 +1,36 @@
 <div class="row">
     <div class="large-6 columns">
-        <h1>login form demo:</h1>
-        <h3> {{status}}</h3>
-        <div class="row collapse prefix-radius">
-            <div class="small-2 columns">
-                <span class="prefix">username</span>
+        
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1>login form demo:</h1>
+            <p>Sample of using <code>factory</code> to storing <code>data</code> and passing it cross controller</p>
+
+            <h3> {{status}}</h3>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">username</span>
+                        <input type="text" name="username" id="username" data-ng-model="username" value="admin" class="form-control">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon">password</span>
+                        <input type="password" name="password" value="admin" id="password" class="form-control" data-ng-model="password">
+                    </div>
+                </div>
             </div>
-            <div class="small-10 columns">
-                <input type="text" name="username" id="username" data-ng-model="username" value="admin">
-            </div>
-        </div>
-        <div class="row collapse prefix-radius">
-            <div class="small-2 columns">
-                <span class="prefix">password</span>
-            </div>
-            <div class="small-10 columns">
-                <input type="password" name="password" value="admin" id="password" data-ng-model="password">
-            </div>
-        </div>
-        <div class="row">
-            <div class="small-6 columns">
-                <input type="button" class="button" value="Login" ng-click="login()">
-                <input type="button" class="button" value="clear" data-ng-click="clear">
+            <div class="row">
+            <br>
+                <div class="col-sm-6">
+                    <button type="button" class="btn btn-primary" ng-click="login()" class="form-control">Login</button>
+                    <button type="button" class="btn btn-default" data-ng-click="clear" class="form-control">clear</button>
+                </div>
             </div>
         </div>
     </div>

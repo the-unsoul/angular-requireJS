@@ -33,9 +33,12 @@ $ico : 'icomoon';
    Author's custom styles
 ========================================================================== 
 */
+.mygrid{
+   // width: 100%;
+}
 
-
-
+.angular-google-map-container { height: 600px; }
+#map_canvas img, .gmnoprint img{max-width:none}
 /* 
 ==========================================================================
    Foundation fixs
@@ -64,6 +67,16 @@ $ico : 'icomoon';
    Helper classes
 ========================================================================== 
 */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+.ng-cloak, .x-ng-cloak,
+.ng-hide:not(.ng-hide-animate) {
+  display: none !important;
+}
+
+ng\:form {
+  display: block;
+}
+
 .company{ color: #fff;}
 .company:hover {color: #f87a0f;}
 .ir {
