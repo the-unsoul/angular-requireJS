@@ -3,7 +3,7 @@ requirejs.config({
   paths: {
     async: 'requirejs/async',
     jquery: 'jquery-1.11.1.min',
-    angular: 'angular/angular',
+    angular: 'angular/angular.min',
     angularAMD: 'requirejs/angularAMD.min',
     underscore: 'underscore-min',
     'angular-route': 'angular/angular-route.min',
@@ -14,8 +14,8 @@ requirejs.config({
     'ng-map': 'angular-google-maps/angular-google-maps.min',
     'lodash': 'angular-google-maps/lodash.min',
     'angular-resource': 'angular-resource/angular-resource.min',
-    'bootstrap': 'angular-bootstrap/ui-bootstrap.min',
     'bootstrap-tpls': 'angular-bootstrap/ui-bootstrap-tpls.min',
+    'ng-animate': 'angular/angular-animate',
     testCtrl: '../controllers/testCtrl',
     loginCtrl: '../controllers/loginCtrl',
     gridCtrl: '../controllers/gridCtrl',
@@ -24,7 +24,6 @@ requirejs.config({
     tabCtrl: '../controllers/tabCtrl'
   },
   shim: {
-    foundation: ['jquery'],
     angular: ['underscore'],
     angularAMD: ['angular'],
     'angular-route': ['angular'],
@@ -32,6 +31,7 @@ requirejs.config({
     'angular-resource': ['angular'],
     bootstrap: ['angular'],
     'bootstrap-tpls': ['angular'],
+    'ng-animate': ['angular'],
     'ng-map': ['lodash', 'angular'],
     jquery: {
       exports: '$'
@@ -41,8 +41,4 @@ requirejs.config({
     }
   },
   deps: ['app']
-});
-
-require(['foundation'], function(foundation) {
-  return $(document).foundation();
 });

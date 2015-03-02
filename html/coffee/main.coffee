@@ -4,7 +4,7 @@ requirejs.config
 		# deps
 		async              : 'requirejs/async'
 		jquery             : 'jquery-1.11.1.min'
-		angular            : 'angular/angular'
+		angular            : 'angular/angular.min'
 		angularAMD         : 'requirejs/angularAMD.min'
 		underscore         : 'underscore-min'
 		'angular-route'    : 'angular/angular-route.min'
@@ -15,8 +15,8 @@ requirejs.config
 		'ng-map'           : 'angular-google-maps/angular-google-maps.min'
 		'lodash'           : 'angular-google-maps/lodash.min'
 		'angular-resource' : 'angular-resource/angular-resource.min'
-		'bootstrap'        : 'angular-bootstrap/ui-bootstrap.min'
 		'bootstrap-tpls'   : 'angular-bootstrap/ui-bootstrap-tpls.min'
+		'ng-animate'       : 'angular/angular-animate'
 
 		# controllers
 		testCtrl   : '../controllers/testCtrl'
@@ -28,7 +28,7 @@ requirejs.config
 
 
 	shim:
-		foundation         : ['jquery']
+		# foundation         : ['jquery']
 		angular            : ['underscore']
 		angularAMD         : ['angular']
 		'angular-route'    : ['angular']
@@ -36,6 +36,7 @@ requirejs.config
 		'angular-resource' : ['angular']
 		bootstrap          : ['angular']
 		'bootstrap-tpls'   : ['angular']
+		'ng-animate'       : ['angular']
 		'ng-map'           : ['lodash', 'angular']
 
 		jquery:
@@ -45,7 +46,7 @@ requirejs.config
 	# kick start app
 	deps: ['app']
 
-require ['foundation'], (foundation) ->
-	$(document).foundation()
+# require ['foundation'], (foundation) ->
+# 	$(document).foundation()
 
 

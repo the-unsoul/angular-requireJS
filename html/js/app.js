@@ -1,6 +1,6 @@
-define(['angularAMD', 'angular-route', 'ui-grid', 'ng-map', 'angular-resource', 'bootstrap', 'bootstrap-tpls'], function(angularAMD) {
+define(['angularAMD', 'ng-animate', 'angular-route', 'ui-grid', 'ng-map', 'angular-resource', 'bootstrap-tpls'], function(angularAMD) {
   var app;
-  app = angular.module('angularTest', ['ngRoute', 'ui.grid', 'uiGmapgoogle-maps', 'ngResource', 'ui.bootstrap']);
+  app = angular.module('angularTest', ['ngAnimate', 'ngRoute', 'ui.grid', 'uiGmapgoogle-maps', 'ngResource', 'ui.bootstrap']);
   app.config([
     '$routeProvider', function($routeProvider) {
       return $routeProvider.when("/home", angularAMD.route({

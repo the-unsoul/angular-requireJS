@@ -2,7 +2,7 @@
 * @Author: UnS
 * @Date:   2015-02-03 10:26:25
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-02-13 16:09:52
+* @Last Modified time: 2015-03-02 15:00:33
 */
 
 define(['app'], function(app) {
@@ -13,7 +13,7 @@ define(['app'], function(app) {
 	 		done: false
 	 	},{
 	 		name: "considering UI Bootstrap" ,
-	 		done: false
+	 		done: true
 	 	},{
 	 		name: "try tests with nesting route",
 	 		done: false
@@ -25,6 +25,9 @@ define(['app'], function(app) {
 	 		done: true
 	 	},{
 	 		name: 'testing and decided to use it or not',
+	 		done: false
+	 	},{
+	 		name: 'settup Angular animation for all pages',
 	 		done: false
 	 	}];
 	 	$scope.t_length =  function () {

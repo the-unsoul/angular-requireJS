@@ -1,10 +1,10 @@
 define [
 	'angularAMD'
+	'ng-animate'
 	'angular-route'
 	'ui-grid'
 	'ng-map'
 	'angular-resource'
-	'bootstrap'
 	'bootstrap-tpls'
 
 ],(angularAMD) ->
@@ -12,12 +12,12 @@ define [
 	# [A]ngular
 	app = angular.module 'angularTest', 
 	[
+		'ngAnimate'
 		'ngRoute' 
 		'ui.grid' 
 		'uiGmapgoogle-maps' 
 		'ngResource'
 		'ui.bootstrap'
-		
 	]
 
 	app.config ['$routeProvider', ($routeProvider)->
