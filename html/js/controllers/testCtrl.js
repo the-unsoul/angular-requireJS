@@ -2,7 +2,7 @@
 * @Author: UnS
 * @Date:   2015-02-03 10:26:25
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-03-02 15:00:33
+* @Last Modified time: 2015-03-03 12:11:34
 */
 
 define(['app'], function(app) {
@@ -29,6 +29,12 @@ define(['app'], function(app) {
 	 	},{
 	 		name: 'settup Angular animation for all pages',
 	 		done: false
+	 	},{
+ 			name: 'learn github.com/lynndylanhurley/ng-token-auth#about-this-module',
+ 			done: false
+	 	},{
+	 		name: 'learn about karma',
+ 			done: false
 	 	}];
 	 	$scope.t_length =  function () {
 	 		return $scope.todos.length;
