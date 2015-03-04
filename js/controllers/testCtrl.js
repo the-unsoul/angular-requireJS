@@ -2,7 +2,7 @@
 * @Author: UnS
 * @Date:   2015-02-03 10:26:25
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-03-03 12:11:34
+* @Last Modified time: 2015-03-03 18:19:37
 */
 
 define(['app'], function(app) {
@@ -22,19 +22,25 @@ define(['app'], function(app) {
 	 		done: true
 	 	},{
 	 		name: 'try chart.js',
-	 		done: true
+	 		done: false
 	 	},{
 	 		name: 'testing and decided to use it or not',
 	 		done: false
 	 	},{
 	 		name: 'settup Angular animation for all pages',
-	 		done: false
+	 		done: true
 	 	},{
  			name: 'learn github.com/lynndylanhurley/ng-token-auth#about-this-module',
  			done: false
 	 	},{
 	 		name: 'learn about karma',
- 			done: false
+ 			done: true
+	 	},{
+	 		name: 'setup karma and running it',
+	 		done: true
+	 	},{
+	 		name: 'inclue unit testin to the app',
+	 		done: false
 	 	}];
 	 	$scope.t_length =  function () {
 	 		return $scope.todos.length;

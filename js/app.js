@@ -71,5 +71,7 @@ define(['angularAMD', 'ng-animate', 'angular-route', 'ui-grid', 'ng-map', 'angul
       });
     }
   ]);
-  return angularAMD.bootstrap(app);
+  var temp = angularAMD.bootstrap(app);
+  console.log(temp);
+  return temp;
 });
