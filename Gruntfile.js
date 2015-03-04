@@ -89,6 +89,11 @@ module.exports = function(grunt) {
           {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'},
         ],
       },
+    },
+    karma:{
+      unit: {
+        configFile: 'karma.conf.js'
+      }
     }
   });
 
@@ -99,6 +104,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-karma');
 
 
   // Default task.
@@ -109,5 +115,8 @@ module.exports = function(grunt) {
 
   // watch css
   grunt.registerTask('watchcss', []);
+
+  // Karma - Jasmine
+  grunt.registerTask('unit', ['karma:unit']);
 };
 
