@@ -6,6 +6,7 @@ define [
 	'ng-map'
 	'angular-resource'
 	'bootstrap-tpls'
+	'angular-mocks'
 
 ],(angularAMD) ->
 	
@@ -18,11 +19,13 @@ define [
 		'uiGmapgoogle-maps' 
 		'ngResource'
 		'ui.bootstrap'
+		'ngMock'
 	]
 
 	app.config ['$routeProvider', ($routeProvider)->
 		$routeProvider
 		.when "/home", angularAMD.route 
+			utestParam: 'testCtrl'
 			templateUrl: 'views/home.html'
 			controller: 'testCtrl'
 		.when "/login", angularAMD.route

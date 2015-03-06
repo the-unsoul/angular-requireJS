@@ -12,7 +12,9 @@ npm install
 npm start
 ```
 
-# Coding
+# Development
 ```
-gurnt watchjs
+grunt watchjs
+
+grunt unit
 ```

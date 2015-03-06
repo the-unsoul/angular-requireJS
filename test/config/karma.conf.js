@@ -5,7 +5,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: '../../',
 
 
     // frameworks to use
@@ -15,14 +15,15 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      {pattern: 'html/js/*.js', included: false},
+      {pattern: 'html/js/controllers/*.js', included: false},
       {pattern: 'html/js/vendor/**/*.js', included: false},
       {pattern: 'html/js/vendor/*.js', included: false},
-      {pattern: 'html/js/controllers/*.js', included: false},
       {pattern: 'html/js/services/*.js', included: false},
       {pattern: 'bower_components/**/*.js', included: false},
       {pattern: 'test/*.js', included: false},
       {pattern: 'test/**/*.js', included: false},
-      'test-main.js'
+      'test-main.js',
     ],
 
     // list of files to exclude
@@ -60,11 +61,12 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+    // , 'Firefox', 'PhantomJS'
     browsers: ['Chrome'],
 
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: true
   });
 };

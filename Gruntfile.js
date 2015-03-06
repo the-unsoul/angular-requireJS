@@ -92,7 +92,30 @@ module.exports = function(grunt) {
     },
     karma:{
       unit: {
-        configFile: 'karma.conf.js'
+        configFile: 'test/config/karma.conf.js'
+      }
+    },
+    requirejs: {
+      compile: {
+        options: {
+          uglify2: {
+              mangle: false
+          },
+          baseUrl: "html/",
+          mainConfigFile: 'html/js/main.js',
+          // out: 'html/js/optimized.js',
+          optimize: 'uglify2',
+          modules: [
+            {
+              name: 'app',
+              include: [
+                'testCtrl'
+              ]
+            },{
+              name: 'loginCtrl'
+            }
+          ]
+        }
       }
     }
   });
@@ -104,6 +127,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-karma');
 
 
@@ -118,5 +142,8 @@ module.exports = function(grunt) {
 
   // Karma - Jasmine
   grunt.registerTask('unit', ['karma:unit']);
+
+  // r.js optimize
+  grunt.registerTask('optimize', ['requirejs']);
 };
 

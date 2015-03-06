@@ -2,7 +2,7 @@
 * @Author: UnS
 * @Date:   2015-02-03 10:26:25
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-03-03 12:11:34
+* @Last Modified time: 2015-03-04 17:04:00
 */
 
 define(['app'], function(app) {
@@ -56,7 +56,5 @@ define(['app'], function(app) {
 	 		});
 	 		 
 	 	};
-	 		
-
 	}]);
 });

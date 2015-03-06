@@ -31,6 +31,11 @@
          color: #999;
       }
    </style>
+   <script>
+   function methodName(arguments) {
+     
+   }
+   </script>
 </head>
 
 <body>
@@ -40,7 +45,7 @@
 
 <!-- Content start! -->
 
-<nav class="navbar navbar-default" role="navigation"  data-ng-controller="homeCtrl">
+<nav class="navbar navbar-default" role="navigation"  ng-controller="homeCtrl">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -54,8 +59,8 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav" data-ng-cloak>
-            <li><a data-ng-click="logIt()">Username: </a></li>
+        <ul class="nav navbar-nav" ng-cloak>
+            <li><a ng-click="logIt()">Username: </a></li>
             <li><a><b>{{currentUser}}</b></a></li>
         </ul>
 
@@ -70,7 +75,7 @@
                 <a  href="#/home">Home</a>
             </li>
             <li class="{{isActive('/login')}}">
-                <a href="#/login" data-ng-cloak>{{loginButton}}</a>
+                <a ng-cloak href="#/login">{{loginButton}}</a>
             </li>
             <li class="{{isActive('/grid')}}">
                 <a href="#/grid">ng-ui-grid</a>
