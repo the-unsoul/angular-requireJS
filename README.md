@@ -12,7 +12,7 @@ Install application dependencies
 npm install
 ```
 #### end to end (e2e) protractor settup
-require [Selenium Server] running along with JDK 
+require [Selenium Server] running along with JDK. 
 Check out [server-setup](http://angular.github.io/protractor/#/server-setup)
 ```
 npm install -g protractor
