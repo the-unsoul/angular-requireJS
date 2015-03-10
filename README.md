@@ -1,9 +1,9 @@
 # angular-requireJS
 ##A seed project for angular and requireJS using AngularAMD
-#### Author: UnS
-#### Author's email: duylinh20032003@yahoo.com
-#### Company: Elinext
-#### State: (Alpha) 
+##### Author: UnS
+##### Author's email: duylinh20032003@yahoo.com
+##### Company: Elinext
+##### State: (Alpha) 
 
 
 # Installation:
