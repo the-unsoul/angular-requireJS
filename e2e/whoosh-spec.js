@@ -2,7 +2,7 @@
 * @Author: UnS
 * @Date:   2015-03-10 10:23:11
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-03-10 15:06:29
+* @Last Modified time: 2015-03-10 17:01:50
 */
 
 describe('Whoosh page\'s functionalities', function() {
@@ -16,3 +16,5 @@ describe('Whoosh page\'s functionalities', function() {
 		expect(data.count()).toEqual(2);
 	});
 });
+
+console.log('whoosh-spec.js');

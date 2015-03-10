@@ -7,6 +7,11 @@ Install application dependencies
 ```
 npm install
 ```
+#### end to end (e2e) protractor settup
+require [Selenium Server] running along with JDK [server-setup](http://angular.github.io/protractor/#/server-setup)
+```
+npm install -g protractor
+```
 
 # Start
 Start node server then start fake API for the project
@@ -21,8 +26,9 @@ grunt watchjs
 ```
 
 # Testing
-running both unit testing with end to end (e2e)  testing
+running both unit testing with e2e testing
 ```
+webdriver-manager start
 grunt test
 ```
 

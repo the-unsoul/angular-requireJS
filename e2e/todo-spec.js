@@ -2,10 +2,11 @@
  * @Author: UnS
  * @Date:   2015-03-07 19:42:45
  * @Last Modified by:   UnS
- * @Last Modified time: 2015-03-10 15:05:52
+ * @Last Modified time: 2015-03-10 17:01:48
  */
 
 describe('angularjs homepage todo list', function() {
+    
     browser.get('http://localhost:3030/#/home');
     browser.waitForAngular();
     
@@ -34,3 +35,5 @@ describe('angularjs homepage todo list', function() {
 
     
 });
+
+console.log('todo-spec.js');

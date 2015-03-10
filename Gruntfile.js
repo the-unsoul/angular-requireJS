@@ -98,8 +98,8 @@ module.exports = function(grunt) {
     protractor: {
       options: {
         configFile: 'e2e-conf.js',
-        keepAlive: true,
-        nColor: false,
+        keepAlive: false,
+        noColor: true,
         args: {
           // args passed to the command
         }
@@ -131,9 +131,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    e2e:{
-
-    }
   });
 
   // These plugins provide necessary tasks.

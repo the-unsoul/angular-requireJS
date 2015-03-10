@@ -11,7 +11,7 @@
     for(var i = 0; i< allTestFiles.length; i++){
         str += '\t'+allTestFiles[i]+'\n';
     }
-    console.log('\nTesting files:\n' + str);
+    console.log('\nUnit testing specs:\n' + str);
     require.config({
         baseUrl: "/base",
         paths: {

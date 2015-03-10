@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
+    "test": "webdriver-manager start",
     "json": "json-server db.json"
   },
   "author": "UnS",
