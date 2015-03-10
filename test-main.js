@@ -38,6 +38,11 @@
             whooshCtrl: 'html/js/controllers/whooshCtrl',
             tabCtrl: 'html/js/controllers/tabCtrl',
 
+            constants: 'html/js/services/constants',
+            auth: 'html/js/services/auth',
+            map: 'html/js/services/map',
+            whoosh: 'html/js/services/whoosh',
+
             allTests: [
                 'test/test'
             ]
@@ -54,13 +59,14 @@
             'ng-animate': ['angular'],
             'ng-map': ['lodash', 'angular'],
 
-            // Ctrl dep is required for angularAMD/require/karma/jasmine (?) not cufused in setting up environment for testing
+            // Ctrl's dep is required for angularAMD/require/karma/jasmine (?) not cufused in setting up environment for testing
             testCtrl: ['app'],
             loginCtrl: ['app'],
             gridCtrl: ['app'],
             mapCtrl: ['app'],
             whooshCtrl: ['app'],
             tabCtrl: ['app'],
+            WHOOSH: ['app'],
 
             jquery: {
                 exports: '$'

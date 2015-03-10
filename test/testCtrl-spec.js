@@ -4,9 +4,7 @@ define(['app', 'angularAMD', 'testCtrl'], function(app, angularAMD, testCtrl) {
     var $scope, ctrl;
     angularAMD.inject(function ($rootScope, $controller) {
         $scope = $rootScope.$new();
-        ctrl = $controller('testCtrl', {
-            $scope: $scope
-        });
+        ctrl = $controller('testCtrl', {$scope: $scope});
     });
     
 

@@ -95,6 +95,19 @@ module.exports = function(grunt) {
         configFile: 'test/config/karma.conf.js'
       }
     },
+    protractor: {
+      options: {
+        configFile: 'e2e-conf.js',
+        keepAlive: true,
+        nColor: false,
+        args: {
+          // args passed to the command
+        }
+      },
+      run: {
+
+      }
+    },
     requirejs: {
       compile: {
         options: {
@@ -117,6 +130,9 @@ module.exports = function(grunt) {
           ]
         }
       }
+    },
+    e2e:{
+
     }
   });
 
@@ -129,6 +145,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-karma');
+  grunt.loadNpmTasks('grunt-protractor-runner');
 
 
   // Default task.
@@ -140,10 +157,17 @@ module.exports = function(grunt) {
   // watch css
   grunt.registerTask('watchcss', []);
 
-  // Karma - Jasmine
+  // Unit testing - Karma - Jasmine
   grunt.registerTask('unit', ['karma:unit']);
+
+  // e2e testing - Protractor
+  grunt.registerTask('e2e', ['protractor']);
+  
+  // both tests(?)
+  grunt.registerTask('test', ['unit', 'e2e']);
 
   // r.js optimize
   grunt.registerTask('optimize', ['requirejs']);
+
 };
 

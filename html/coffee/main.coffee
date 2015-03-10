@@ -26,6 +26,11 @@ requirejs.config
 		whooshCtrl : '../controllers/whooshCtrl'
 		tabCtrl    : '../controllers/tabCtrl'
 
+		# services
+		constants : '../services/constants',
+		auth      : '../services/auth',
+		map       : '../services/map',
+		whoosh    : '../services/whoosh',
 
 	shim:
 		# foundation         : ['jquery']

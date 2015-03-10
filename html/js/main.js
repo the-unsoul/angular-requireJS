@@ -21,7 +21,11 @@ requirejs.config({
     gridCtrl: '../controllers/gridCtrl',
     mapCtrl: '../controllers/mapCtrl',
     whooshCtrl: '../controllers/whooshCtrl',
-    tabCtrl: '../controllers/tabCtrl'
+    tabCtrl: '../controllers/tabCtrl',
+    constants: '../services/constants',
+    auth: '../services/auth',
+    map: '../services/map',
+    whoosh: '../services/whoosh'
   },
   shim: {
     angular: ['underscore'],

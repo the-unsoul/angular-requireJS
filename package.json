@@ -8,7 +8,8 @@
     "jade": "~1.8.2"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "json": "json-server db.json"
   },
   "author": "UnS",
   "license": "MIT",
@@ -27,6 +28,7 @@
     "grunt-contrib-uglify": "~0.5.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-karma": ">=0.5.0",
+    "grunt-protractor-runner": "^1.2.1",
     "jasmine-core": "^2.2.0",
     "karma": "^0.12.31",
     "karma-chrome-launcher": "^0.1.7",
@@ -36,6 +38,7 @@
     "karma-requirejs": "^0.2.2",
     "morgan": "~1.5.1",
     "phantom": "^0.7.2",
+    "protractor": "^1.8.0",
     "requirejs": "^2.1.16",
     "serve-favicon": "~2.2.0"
   }

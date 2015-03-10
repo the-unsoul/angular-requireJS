@@ -2,7 +2,7 @@
 * @Author: UnS
 * @Date:   2015-02-03 10:26:25
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-03-04 17:04:00
+* @Last Modified time: 2015-03-07 21:22:30
 */
 
 define(['app'], function(app) {
@@ -28,19 +28,29 @@ define(['app'], function(app) {
 	 		done: false
 	 	},{
 	 		name: 'settup Angular animation for all pages',
-	 		done: false
+	 		done: true
 	 	},{
  			name: 'learn github.com/lynndylanhurley/ng-token-auth#about-this-module',
  			done: false
 	 	},{
 	 		name: 'learn about karma',
+ 			done: true
+	 	},{
+	 		name: 'learn about protractor',
  			done: false
+	 	},{
+	 		name: 'learn angular forms',
+	 		done: false
+	 	},{
+	 		name: 'learn more filter - ngFilter',
+	 		done: false
+	 	},{
+	 		name: 'more directive',
+	 		done: false
 	 	}];
 	 	$scope.t_length =  function () {
 	 		return $scope.todos.length;
 	 	};
-	 		
-
 	 	$scope.newTodo = '';
 	 	$scope.addTodo = function() {
 	 		if ($scope.newTodo === '')
