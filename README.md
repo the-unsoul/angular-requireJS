@@ -1,8 +1,8 @@
 # angular-requireJS
-##testing with angular and requireJS
+##A seed project for angular and requireJS using AngularAMD
 
 
-# Instal:
+# Installation:
 Install application dependencies
 ```
 npm install
@@ -13,14 +13,15 @@ require [Selenium Server] running along with JDK [server-setup](http://angular.g
 npm install -g protractor
 ```
 
-# Start
+# Start up localhost  and json
 Start node server then start fake API for the project
 ```
 npm start
 npm run json
 ```
+access sample project seed with [http://localhost:3030/](http://localhost:3030/)
 
-# Development
+# Development with coffee script (on draft, might be removed)
 ```
 grunt watchjs
 ```
