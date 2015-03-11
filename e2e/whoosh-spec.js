@@ -2,7 +2,7 @@
 * @Author: UnS
 * @Date:   2015-03-10 10:23:11
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-03-10 17:01:50
+* @Last Modified time: 2015-03-11 18:39:47
 */
 
 describe('Whoosh page\'s functionalities', function() {
@@ -10,6 +10,7 @@ describe('Whoosh page\'s functionalities', function() {
 	it('counting results in json API', function() {
 		browser.get('http://localhost:3030/#/whoosh');
 		browser.waitForAngular();
+		
 		expect(browser.getCurrentUrl()).toEqual('http://localhost:3030/#/whoosh');
 		var data = element.all(by.repeater('value in data'));
 		expect(data.count()).toBeGreaterThan(0);

@@ -2,7 +2,7 @@
  * @Author: UnS
  * @Date:   2015-02-12 18:33:16
  * @Last Modified by:   UnS
- * @Last Modified time: 2015-02-26 12:00:13
+ * @Last Modified time: 2015-03-11 14:55:42
  */
 
 /**
@@ -23,15 +23,13 @@ define(['app'], function(app) {
     	return{
     		getMarkers: function(action) {
     			var d = $q.defer();
-    			$http.get('/json/'+ action)
-    				.success(function(data) {
-				        d.resolve(data);
-                        console.log('fetch successed!');
-    				})
-    				.error(function(msg, code) {
-                        console.log('fetch failed!');
-    					d.reject(msg);
-    				});
+    			$http.get('http://localhost:3000/'+ action)
+				.success(function(data) {
+			        d.resolve(data);
+				})
+				.error(function(msg, code) {
+					d.reject(msg);
+				});
 				return d.promise;
     		},
             errorHandler: function(error) {

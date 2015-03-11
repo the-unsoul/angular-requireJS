@@ -2,10 +2,10 @@
 * @Author: UnS
 * @Date:   2015-03-10 10:26:54
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-03-10 15:17:29
+* @Last Modified time: 2015-03-11 14:46:35
 */
 
-define(['app', 'angularAMD', 'whooshCtrl', 'angular-mocks', 'constants', 'whoosh'], function(app, angularAMD, whooshCtrl) {
+define(['app', 'angularAMD',  'whooshCtrl', 'constants', 'whoosh'], function(app, angularAMD) {
 
 	/* ------ {{ injections }} ------------------------------------ */
 	var $scope, $resource, $httpBackend, ctrl, WHOOSH;

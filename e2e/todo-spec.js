@@ -2,15 +2,17 @@
  * @Author: UnS
  * @Date:   2015-03-07 19:42:45
  * @Last Modified by:   UnS
- * @Last Modified time: 2015-03-10 17:01:48
+ * @Last Modified time: 2015-03-11 18:39:43
  */
 
 describe('angularjs homepage todo list', function() {
     
-    browser.get('http://localhost:3030/#/home');
-    browser.waitForAngular();
+    
     
     it('should add a todo', function() {
+        browser.get('http://localhost:3030/#/home');
+        browser.waitForAngular();
+        
         element(by.model('newTodo')).sendKeys('write a protractor test');
         element(by.buttonText('Add todo')).click();
         var $todos = element.all(by.repeater('(key, todo) in todos | filter:newTodo'));
@@ -19,7 +21,7 @@ describe('angularjs homepage todo list', function() {
     });
 
     it('should get filtered', function() {
-        element(by.model('newTodo')).sendKeys('write a protractor test');
+        element(by.model('newTodo')).sendKeys('more security research');
         var $todos = element.all(by.repeater('(key, todo) in todos | filter:newTodo'));
         expect($todos.count()).toEqual(1);
     });

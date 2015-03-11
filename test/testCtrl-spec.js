@@ -1,3 +1,4 @@
+
 define(['app', 'angularAMD', 'testCtrl'], function(app, angularAMD, testCtrl) {
 
     /* ------ {{ injections }} ------------------------------------ */
@@ -18,6 +19,5 @@ define(['app', 'angularAMD', 'testCtrl'], function(app, angularAMD, testCtrl) {
             expect($scope.todos).toEqual(jasmine.any(Array));
         });
     });
-
-
 });
+

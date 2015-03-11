@@ -31,6 +31,7 @@ requirejs.config
 		auth      : '../services/auth',
 		map       : '../services/map',
 		whoosh    : '../services/whoosh',
+		grid      : '../services/grid',
 
 	shim:
 		# foundation         : ['jquery']

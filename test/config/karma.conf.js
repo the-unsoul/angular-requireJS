@@ -23,6 +23,7 @@ module.exports = function(config) {
       {pattern: 'html/js/*.js', included: false},
       {pattern: 'test/*.js', included: false},
       {pattern: 'test/**/*.js', included: false},
+      'http://maps.googleapis.com/maps/api/js?sensor=false',
       'test-main.js',
     ],
 

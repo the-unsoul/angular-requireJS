@@ -6,13 +6,8 @@
 			<h1>&nbsp;</h1>
 			<div class="row">
 				<tabset>
-				    <tab heading="Static title">
-				    	<h3>Static content</h3>
-				    	<p>bla bla blaaa~~~</p>
-				    </tab>
-				    
 				    <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
-				      	{{ 1+ 1}}
+				      	{{tab.content}}
 				    </tab>
 			  	</tabset>
 			</div>

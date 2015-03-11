@@ -25,7 +25,8 @@ requirejs.config({
     constants: '../services/constants',
     auth: '../services/auth',
     map: '../services/map',
-    whoosh: '../services/whoosh'
+    whoosh: '../services/whoosh',
+    grid: '../services/grid'
   },
   shim: {
     angular: ['underscore'],

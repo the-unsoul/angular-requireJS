@@ -42,7 +42,7 @@ define [
 			title: 'Whoosh'
 			templateUrl: 'views/whoosh.html'
 			controller: 'whooshCtrl'
-		.when '/ui-router', angularAMD.route
+		.when '/tab', angularAMD.route
 			title: 'Tab'
 			templateUrl: 'views/tab.html'
 			controller: 'tabCtrl'
