@@ -35,6 +35,7 @@
             'bootstrap-tpls'   : 'html/js/vendor/angular-bootstrap/ui-bootstrap-tpls.min',
             'locale'           : 'html/js/vendor/angular-i18n/angular-locale_vi-vn',
             'angular-translate': 'html/js/vendor/angular-translate/angular-translate.min',
+            'dynamic-locale'   : 'html/js/vendor/angular-dynamic-locale/tmhDynamicLocale',
 
             testCtrl   : 'html/js/controllers/testCtrl',
             loginCtrl  : 'html/js/controllers/loginCtrl',
