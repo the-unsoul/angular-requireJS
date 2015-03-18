@@ -17,6 +17,9 @@ requirejs.config
 		'angular-resource' : 'angular-resource/angular-resource.min'
 		'bootstrap-tpls'   : 'angular-bootstrap/ui-bootstrap-tpls.min'
 		'ng-animate'       : 'angular/angular-animate'
+		'locale'           : 'angular-i18n/angular-locale_en'
+		'angular-translate': 'angular-translate/angular-translate.min'
+		'dynamic-locale'   : 'angular-dynamic-locale/tmhDynamicLocale'
 
 		# controllers
 		testCtrl   : '../controllers/testCtrl'
@@ -26,6 +29,13 @@ requirejs.config
 		whooshCtrl : '../controllers/whooshCtrl'
 		tabCtrl    : '../controllers/tabCtrl'
 
+		# services
+		constants : '../services/constants',
+		auth      : '../services/auth',
+		map       : '../services/map',
+		whoosh    : '../services/whoosh',
+		grid      : '../services/grid',
+		translations: '../services/translations'
 
 	shim:
 		# foundation         : ['jquery']
@@ -37,14 +47,18 @@ requirejs.config
 		bootstrap          : ['angular']
 		'bootstrap-tpls'   : ['angular']
 		'ng-animate'       : ['angular']
+		'angular-translate': ['angular']
+		'dynamic-locale'     : ['angular']
 		'ng-map'           : ['lodash', 'angular']
+
+		'locale'           : ['angular']
 
 		jquery:
 			exports: '$'
 		underscore:
 			exports: '_'
 	# kick start app
-	deps: ['app']
+	deps: ['app', 'locale']
 
 # require ['foundation'], (foundation) ->
 # 	$(document).foundation()

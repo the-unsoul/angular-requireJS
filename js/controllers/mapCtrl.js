@@ -2,10 +2,10 @@
 * @Author: UnS
 * @Date:   2015-02-12 17:11:22
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-02-26 18:40:42
+* @Last Modified time: 2015-03-11 10:51:10
 */
 
-define(['app', 'ng-map', '../services/map', 'async!http://maps.googleapis.com/maps/api/js?sensor=false'], function(app) {
+define(['app', 'ng-map', 'map', 'async!http://maps.googleapis.com/maps/api/js?sensor=false'], function(app) {
 	app.controller('mapCtrl', ['$scope', 'mapServices', function($scope, mapServices){
 		$scope.map = {
 			center: { latitude: 45, longitude: -73 },
@@ -34,13 +34,13 @@ define(['app', 'ng-map', '../services/map', 'async!http://maps.googleapis.com/ma
 			};
 		};
 
-		mapServices.getMarkers('markers.json')
+		mapServices.getMarkers('markers')
 			.then(addMarker, mapServices.errorHandler)
 			.then(doneInitMaker, mapServices.errorHandler);
 
 		$scope.$watch('markers', function(nv, ov) {
 			if(nv != ov){
-				console.log('watch: markers fetched');
+				console.log('$watch: markers fetched');
 			}
 		});
 	}]);

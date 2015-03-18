@@ -2,11 +2,11 @@
 * @Author: UnS
 * @Date:   2015-02-03 10:26:25
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-03-03 18:19:37
+* @Last Modified time: 2015-03-18 15:10:37
 */
 
 define(['app'], function(app) {
-	app.controller('testCtrl', ['$scope', function ($scope) {
+	app.controller('testCtrl', ['$scope', '$timeout' , function ($scope, $timeout) {
 		$scope.appName = 'requireJS + angularJS';
 	 	$scope.todos = [{
 	 		name: "more security research",
@@ -22,7 +22,7 @@ define(['app'], function(app) {
 	 		done: true
 	 	},{
 	 		name: 'try chart.js',
-	 		done: false
+	 		done: true
 	 	},{
 	 		name: 'testing and decided to use it or not',
 	 		done: false
@@ -36,17 +36,22 @@ define(['app'], function(app) {
 	 		name: 'learn about karma',
  			done: true
 	 	},{
-	 		name: 'setup karma and running it',
-	 		done: true
+	 		name: 'learn about protractor',
+ 			done: false
 	 	},{
-	 		name: 'inclue unit testin to the app',
+	 		name: 'learn angular forms',
+	 		done: false
+	 	},{
+	 		name: 'learn more filter - ngFilter',
+	 		done: false
+	 	},{
+	 		name: 'more directive',
 	 		done: false
 	 	}];
+	 	$scope.date = new Date();
 	 	$scope.t_length =  function () {
 	 		return $scope.todos.length;
 	 	};
-	 		
-
 	 	$scope.newTodo = '';
 	 	$scope.addTodo = function() {
 	 		if ($scope.newTodo === '')
@@ -62,7 +67,6 @@ define(['app'], function(app) {
 	 		});
 	 		 
 	 	};
-	 		
 
 	}]);
 });

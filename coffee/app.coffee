@@ -1,14 +1,16 @@
 define [
 	'angularAMD'
+	'translations'
 	'ng-animate'
 	'angular-route'
 	'ui-grid'
 	'ng-map'
 	'angular-resource'
 	'bootstrap-tpls'
+	'angular-translate'
+	'dynamic-locale'
 
-],(angularAMD) ->
-	
+],(angularAMD, translations) ->
 	# [A]ngular
 	app = angular.module 'angularTest', 
 	[
@@ -18,31 +20,45 @@ define [
 		'uiGmapgoogle-maps' 
 		'ngResource'
 		'ui.bootstrap'
+		'pascalprecht.translate'
+		'tmh.dynamicLocale'
 	]
 
-	app.config ['$routeProvider', ($routeProvider)->
+	app.config ['$routeProvider', '$translateProvider', ($routeProvider, $translateProvider)->
 		$routeProvider
 		.when "/home", angularAMD.route 
+			title: 'Home'
 			templateUrl: 'views/home.html'
 			controller: 'testCtrl'
 		.when "/login", angularAMD.route
+			title: 'Login'
 			templateUrl: 'views/login.html'
 			controller: 'loginCtrl'
 		.when "/grid", angularAMD.route
+			title: 'Grid'
 			templateUrl: 'views/grid.html'
 			controller: 'gridCtrl'
 		.when '/map', angularAMD.route
+			title: 'Map'
 			templateUrl: 'views/gmap.html'
 			controller: 'mapCtrl'
 		.when '/whoosh', angularAMD.route
+			title: 'Whoosh'
 			templateUrl: 'views/whoosh.html'
 			controller: 'whooshCtrl'
-		.when '/ui-router', angularAMD.route
+		.when '/tab', angularAMD.route
+			title: 'Tab'
 			templateUrl: 'views/tab.html'
 			controller: 'tabCtrl'
 		.otherwise
 			redirectTo: '/home'
 		
+		
+		$translateProvider.translations 'en', translations.en
+		$translateProvider.translations 'vi', translations.vi
+		$translateProvider.preferredLanguage 'en'
+		$translateProvider.fallbackLanguage 'vi'
+
 	]
 	# Factory
 	app.factory 'AppData', ->
@@ -55,7 +71,7 @@ define [
 		}
 
 	# home controller
-	app.controller 'homeCtrl', ['$scope' , '$location', 'AppData', ($scope, $location, AppData) ->
+	app.controller 'homeCtrl', ['$scope' , '$location', 'AppData', '$translate', 'tmhDynamicLocale',  ($scope, $location, AppData, $translate, tmhDynamicLocale) ->
 		
 		# vars
 		$scope.currentUser = AppData.getCurrentUser()
@@ -84,6 +100,13 @@ define [
 			if newValue
 				$scope.loginButton = 'Logout'
 
+		# translate
+		$scope.translate = (langKey)->
+			$translate.use langKey
+			tmhDynamicLocale.set langKey
+
+			
 	]
+			
 
 	angularAMD.bootstrap app

@@ -1,29 +1,39 @@
-define(['angularAMD', 'ng-animate', 'angular-route', 'ui-grid', 'ng-map', 'angular-resource', 'bootstrap-tpls'], function(angularAMD) {
+define(['angularAMD', 'translations', 'ng-animate', 'angular-route', 'ui-grid', 'ng-map', 'angular-resource', 'bootstrap-tpls', 'angular-translate', 'dynamic-locale'], function(angularAMD, translations) {
   var app;
-  app = angular.module('angularTest', ['ngAnimate', 'ngRoute', 'ui.grid', 'uiGmapgoogle-maps', 'ngResource', 'ui.bootstrap']);
+  app = angular.module('angularTest', ['ngAnimate', 'ngRoute', 'ui.grid', 'uiGmapgoogle-maps', 'ngResource', 'ui.bootstrap', 'pascalprecht.translate', 'tmh.dynamicLocale']);
   app.config([
-    '$routeProvider', function($routeProvider) {
-      return $routeProvider.when("/home", angularAMD.route({
+    '$routeProvider', '$translateProvider', function($routeProvider, $translateProvider) {
+      $routeProvider.when("/home", angularAMD.route({
+        title: 'Home',
         templateUrl: 'views/home.html',
         controller: 'testCtrl'
       })).when("/login", angularAMD.route({
+        title: 'Login',
         templateUrl: 'views/login.html',
         controller: 'loginCtrl'
       })).when("/grid", angularAMD.route({
+        title: 'Grid',
         templateUrl: 'views/grid.html',
         controller: 'gridCtrl'
       })).when('/map', angularAMD.route({
+        title: 'Map',
         templateUrl: 'views/gmap.html',
         controller: 'mapCtrl'
       })).when('/whoosh', angularAMD.route({
+        title: 'Whoosh',
         templateUrl: 'views/whoosh.html',
         controller: 'whooshCtrl'
-      })).when('/ui-router', angularAMD.route({
+      })).when('/tab', angularAMD.route({
+        title: 'Tab',
         templateUrl: 'views/tab.html',
         controller: 'tabCtrl'
       })).otherwise({
         redirectTo: '/home'
       });
+      $translateProvider.translations('en', translations.en);
+      $translateProvider.translations('vi', translations.vi);
+      $translateProvider.preferredLanguage('en');
+      return $translateProvider.fallbackLanguage('vi');
     }
   ]);
   app.factory('AppData', function() {
@@ -41,7 +51,7 @@ define(['angularAMD', 'ng-animate', 'angular-route', 'ui-grid', 'ng-map', 'angul
     };
   });
   app.controller('homeCtrl', [
-    '$scope', '$location', 'AppData', function($scope, $location, AppData) {
+    '$scope', '$location', 'AppData', '$translate', 'tmhDynamicLocale', function($scope, $location, AppData, $translate, tmhDynamicLocale) {
       $scope.currentUser = AppData.getCurrentUser();
       $scope.loggedIn = false;
       $scope.loginButton = 'Login';
@@ -64,14 +74,16 @@ define(['angularAMD', 'ng-animate', 'angular-route', 'ui-grid', 'ng-map', 'angul
           return $scope.loggedIn = true;
         }
       });
-      return $scope.$watch('loggedIn', function(newValue) {
+      $scope.$watch('loggedIn', function(newValue) {
         if (newValue) {
           return $scope.loginButton = 'Logout';
         }
       });
+      return $scope.translate = function(langKey) {
+        $translate.use(langKey);
+        return tmhDynamicLocale.set(langKey);
+      };
     }
   ]);
-  var temp = angularAMD.bootstrap(app);
-  console.log(temp);
-  return temp;
+  return angularAMD.bootstrap(app);
 });

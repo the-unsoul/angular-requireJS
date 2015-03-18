@@ -2,22 +2,18 @@
 * @Author: UnS
 * @Date:   2015-02-23 11:32:43
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-03-02 14:37:09
+* @Last Modified time: 2015-03-10 15:11:56
 */
 
-define(['app', '../services/constants'], function(app) {
-	app.controller('whooshCtrl', ['$scope', '$http', '$resource', 'WHOOSH', function($scope, $http, $resource, WHOOSH){
+define(['app', 'constants', 'whoosh'], function(app) {
+	app.controller('whooshCtrl', ['$scope', '$http', 'whooshResource', 'WHOOSH', function($scope, $http, whooshResource, WHOOSH){
 		// var url = 'https://api-integration.parkeon.whooshstore.com/tm/whooshstore.com/PSP/';
 		// var url = 'https://api-integration-europe.parkeon.whooshstore.com/tm/whooshstore.com/customer/v1/eliuser4email/';
 		// var url = 'https://api.twitter.com/1.1/search/tweets.json';
 		
 		var url = 'http://localhost:3000/posts';
 
-		$scope.whoosh = $resource(
-			WHOOSH.APIurl + '/:action',
-		 	{action: WHOOSH.actions.posts}, 
-		 	WHOOSH.methods
-	 	);
+		$scope.whoosh = whooshResource;
 		$scope.data = $scope.whoosh.getArray(function(res) {
 			$scope.display = res;
 		});
