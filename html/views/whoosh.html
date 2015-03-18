@@ -1,19 +1,19 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<h1>Using <code>json-server.js</code> <a href="https://www.npmjs.com/package/json-server"> link</a></h1>
-			<h3><code>$ json-server db.js</code> to start <code>json-server.js</code></h3>
+			<h1>{{'USING' | translate}} <code>json-server.js</code> <a href="https://www.npmjs.com/package/json-server"> link</a></h1>
+			<h3><code>$ json-server db.js</code> {{'TOSTART' | translate}} <code>json-server.js</code></h3>
 			<ul>
 				<li ng-repeat="value in data">
 					<h4>Author: {{value.author}}</h4>
 					<b>title: </b>{{value.title}} <br><br>
 				</li>
 			</ul>
-			Recived data: <br>
+			{{'RECIVEDDATA' | translate}}: <br>
 			<pre>{{display}}</pre>
-			Through: <code>http://localhost:3000/posts</code>
+			{{'THROUGH' | translate}}: <code>http://localhost:3000/posts</code>
 
-			<h3>Using [A]ngular constant: <code>WHOOSH</code></h3>
+			<h3>{{'USING' | translate}} [A]ngular constant: <code>WHOOSH</code></h3>
 			<pre>{{WHOOSH}}</pre>
 		</div>
 	</div>

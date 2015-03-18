@@ -2,11 +2,11 @@
 * @Author: UnS
 * @Date:   2015-02-03 10:26:25
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-03-07 21:22:30
+* @Last Modified time: 2015-03-18 15:10:37
 */
 
 define(['app'], function(app) {
-	app.controller('testCtrl', ['$scope', function ($scope) {
+	app.controller('testCtrl', ['$scope', '$timeout' , function ($scope, $timeout) {
 		$scope.appName = 'requireJS + angularJS';
 	 	$scope.todos = [{
 	 		name: "more security research",
@@ -48,6 +48,7 @@ define(['app'], function(app) {
 	 		name: 'more directive',
 	 		done: false
 	 	}];
+	 	$scope.date = new Date();
 	 	$scope.t_length =  function () {
 	 		return $scope.todos.length;
 	 	};
@@ -66,5 +67,6 @@ define(['app'], function(app) {
 	 		});
 	 		 
 	 	};
+
 	}]);
 });

@@ -2,12 +2,10 @@
  * @Author: UnS
  * @Date:   2015-03-07 19:42:45
  * @Last Modified by:   UnS
- * @Last Modified time: 2015-03-11 18:39:43
+ * @Last Modified time: 2015-03-13 16:43:28
  */
 
 describe('angularjs homepage todo list', function() {
-    
-    
     
     it('should add a todo', function() {
         browser.get('http://localhost:3030/#/home');

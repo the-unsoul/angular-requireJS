@@ -1,7 +1,9 @@
 ! function() {
+
     var allTestFiles = [],
         TEST_REGEXP = /(spec|utest)\.js$/i,
-        str = '';
+        str = '',
+        locale = 'vi-vn';
 
     Object.keys(window.__karma__.files).forEach(function(file) {
         if (TEST_REGEXP.test(file)) {
@@ -31,6 +33,8 @@
             'lodash'           : 'html/js/vendor/angular-google-maps/lodash.min',
             'angular-resource' : 'html/js/vendor/angular-resource/angular-resource.min',
             'bootstrap-tpls'   : 'html/js/vendor/angular-bootstrap/ui-bootstrap-tpls.min',
+            'locale'           : 'html/js/vendor/angular-i18n/angular-locale_vi-vn',
+            'angular-translate': 'html/js/vendor/angular-translate/angular-translate.min',
 
             testCtrl   : 'html/js/controllers/testCtrl',
             loginCtrl  : 'html/js/controllers/loginCtrl',
@@ -39,37 +43,40 @@
             whooshCtrl : 'html/js/controllers/whooshCtrl',
             tabCtrl    : 'html/js/controllers/tabCtrl',
 
-            constants : 'html/js/services/constants',
-            auth      : 'html/js/services/auth',
-            map       : 'html/js/services/map',
-            whoosh    : 'html/js/services/whoosh',
-            grid      : 'html/js/services/grid',
+            constants    : 'html/js/services/constants',
+            auth         : 'html/js/services/auth',
+            map          : 'html/js/services/map',
+            whoosh       : 'html/js/services/whoosh',
+            grid         : 'html/js/services/grid',
+            translations : 'html/js/services/translations',
 
             allTests: [
                 'test/test'
             ]
         },
         shim: {
-            'app': ['angular', 'angular-mocks'],
-            'angular': ['underscore'],
-            'angular-mocks': ['angular'],
-            'angularAMD': ['angular'],
-            'async': ['app'],
-            'angular-route': ['angular'],
-            'ui-grid': ['angular'],
-            'angular-resource': ['angular'],
-            'bootstrap-tpls': ['angular'],
-            'ng-animate': ['angular'],
-            'ng-map': ['lodash', 'angular'],
+            'app'              : ['angular', 'angular-mocks'],
+            'angular'          : ['underscore'],
+            'angular-mocks'    : ['angular'],
+            'angularAMD'       : ['angular'],
+            'async'            : ['app'],
+            'angular-route'    : ['angular'],
+            'ui-grid'          : ['angular'],
+            'angular-resource' : ['angular'],
+            'bootstrap-tpls'   : ['angular'],
+            'ng-animate'       : ['angular'],
+            'ng-map'           : ['lodash', 'angular'],
+            // 'locale'   : ['angular'],
 
             // Ctrl's dep is required for angularAMD/require/karma/jasmine (?) not cufused in setting up environment for testing
-            testCtrl: ['app'],
-            loginCtrl: ['app'],
-            gridCtrl: ['app'],
-            mapCtrl: ['app'],
-            whooshCtrl: ['app'],
-            tabCtrl: ['app'],
-            WHOOSH: ['app'],
+            testCtrl   : ['app'],
+            loginCtrl  : ['app'],
+            gridCtrl   : ['app'],
+            mapCtrl    : ['app'],
+            whooshCtrl : ['app'],
+            tabCtrl    : ['app'],
+            WHOOSH     : ['app'],
+            
 
             jquery: {
                 exports: '$'
