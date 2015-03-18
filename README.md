@@ -1,5 +1,6 @@
 # angular-requireJS
 Sample page: http://the-unsoul.github.io/angular-requireJS/#/home
+
 note: pages which using JSON API won't work with github-pages. The sample only for demonstrate loading speed and on-demand loading (dependencies injection)
 
 ## A seed project for angular and requireJS using AngularAMD
