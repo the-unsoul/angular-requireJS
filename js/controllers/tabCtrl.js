@@ -2,10 +2,10 @@
 * @Author: UnS
 * @Date:   2015-02-24 16:51:16
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-03-19 12:10:01
+* @Last Modified time: 2015-03-19 14:10:22
 */
 
-define(['app', 'ngload!bootstrap-tpls'], function(app) {
+define(['app'], function(app) {
 
 	app.controller('tabCtrl', ['$scope', '$window', function($scope, $window) {
 		$scope.tabs = [
