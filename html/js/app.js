@@ -1,4 +1,4 @@
-define(['angularAMD', 'translations', 'ng-animate', 'angular-route', 'bootstrap-tpls', 'angular-translate', 'dynamic-locale'], function(angularAMD, translations) {
+define(['angularAMD', 'translations', 'ng-token-auth', 'angular-cookie', 'ng-animate', 'angular-route', 'bootstrap-tpls', 'angular-translate', 'dynamic-locale'], function(angularAMD, translations) {
   var app;
   app = angular.module('angularTest', ['ngAnimate', 'ngRoute', 'ui.bootstrap', 'pascalprecht.translate', 'tmh.dynamicLocale']);
   app.config([

@@ -1,6 +1,8 @@
 define [
 	'angularAMD'
 	'translations'
+	'ng-token-auth'
+	'angular-cookie'
 	'ng-animate'
 	'angular-route'
 	# 'ui-grid'

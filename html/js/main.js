@@ -19,6 +19,8 @@ requirejs.config({
     'locale': 'angular-i18n/angular-locale_en',
     'angular-translate': 'angular-translate/angular-translate.min',
     'dynamic-locale': 'angular-dynamic-locale/tmhDynamicLocale',
+    'ng-token-auth': 'ng-token-auth/dist/ng-token-auth.min',
+    'angular-cookie': 'angular-cookie/angular-cookie.min',
     testCtrl: '../controllers/testCtrl',
     loginCtrl: '../controllers/loginCtrl',
     gridCtrl: '../controllers/gridCtrl',
@@ -44,6 +46,8 @@ requirejs.config({
     'angular-translate': ['angular'],
     'dynamic-locale': ['angular'],
     'ng-map': ['lodash', 'angular'],
+    'ng-token-auth': ['angular'],
+    'angular-cookie': ['angular'],
     'locale': ['angular'],
     jquery: {
       exports: '$'
