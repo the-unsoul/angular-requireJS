@@ -68,9 +68,9 @@
 
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="{{'SEARCH' | translate}}">
+                    <input type="text" class="form-control" placeholder="{{'SEARCH' | translate}}" ng-cloak>
                 </div>
-                <button type="submit" ng-click="i18n()" class="btn btn-default">{{'SUBMIT' | translate}}</button>
+                <button type="submit" ng-click="i18n()" class="btn btn-default" ng-cloak>{{'SUBMIT' | translate}}</button>
                 <!-- Single button -->
                 <div class="btn-group" dropdown is-open="status.isopen">
                     <button ng-cloak type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">

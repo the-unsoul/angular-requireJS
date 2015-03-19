@@ -2,10 +2,11 @@
 * @Author: UnS
 * @Date:   2015-02-24 16:51:16
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-03-11 18:01:30
+* @Last Modified time: 2015-03-19 12:10:01
 */
 
-define(['app'], function(app) {
+define(['app', 'ngload!bootstrap-tpls'], function(app) {
+
 	app.controller('tabCtrl', ['$scope', '$window', function($scope, $window) {
 		$scope.tabs = [
 		    { title:'Dynamic Title 1', disabled: false, content:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam accusantium vero eum molestias ipsam eligendi, dicta sed odit asperiores officiis quisquam deleniti necessitatibus.' },

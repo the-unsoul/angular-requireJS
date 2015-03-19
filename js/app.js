@@ -1,6 +1,6 @@
-define(['angularAMD', 'translations', 'ng-animate', 'angular-route', 'ui-grid', 'ng-map', 'angular-resource', 'bootstrap-tpls', 'angular-translate', 'dynamic-locale'], function(angularAMD, translations) {
+define(['angularAMD', 'translations', 'ng-animate', 'angular-route', 'angular-translate', 'dynamic-locale'], function(angularAMD, translations) {
   var app;
-  app = angular.module('angularTest', ['ngAnimate', 'ngRoute', 'ui.grid', 'uiGmapgoogle-maps', 'ngResource', 'ui.bootstrap', 'pascalprecht.translate', 'tmh.dynamicLocale']);
+  app = angular.module('angularTest', ['ngAnimate', 'ngRoute', 'pascalprecht.translate', 'tmh.dynamicLocale']);
   app.config([
     '$routeProvider', '$translateProvider', function($routeProvider, $translateProvider) {
       $routeProvider.when("/home", angularAMD.route({
