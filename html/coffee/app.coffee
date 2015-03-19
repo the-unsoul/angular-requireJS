@@ -5,7 +5,7 @@ define [
 	'angular-route'
 	# 'ui-grid'
 	# 'angular-resource'
-	# 'bootstrap-tpls'
+	'bootstrap-tpls'
 	'angular-translate'
 	'dynamic-locale'
 
@@ -17,7 +17,7 @@ define [
 		'ngRoute' 
 		# 'ui.grid' 
 		# 'ngResource'
-		# 'ui.bootstrap'
+		'ui.bootstrap'
 		'pascalprecht.translate'
 		'tmh.dynamicLocale'
 	]
