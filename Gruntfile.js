@@ -28,8 +28,8 @@ module.exports = function(grunt) {
         },
         files:{
           'html/js/app.js': 'html/coffee/app.coffee',
-          'html/js/main.js': 'html/coffee/main.coffee',
-          'html/js/login.js': 'html/coffee/login.coffee'
+          'html/js/main.js': 'html/coffee/main.coffee'
+          // 'html/js/login.js': 'html/coffee/login.coffee'
         }
       }
     },

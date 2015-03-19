@@ -3,10 +3,9 @@ define [
 	'translations'
 	'ng-animate'
 	'angular-route'
-	'ui-grid'
-	'ng-map'
-	'angular-resource'
-	'bootstrap-tpls'
+	# 'ui-grid'
+	# 'angular-resource'
+	# 'bootstrap-tpls'
 	'angular-translate'
 	'dynamic-locale'
 
@@ -16,10 +15,9 @@ define [
 	[
 		'ngAnimate'
 		'ngRoute' 
-		'ui.grid' 
-		'uiGmapgoogle-maps' 
-		'ngResource'
-		'ui.bootstrap'
+		# 'ui.grid' 
+		# 'ngResource'
+		# 'ui.bootstrap'
 		'pascalprecht.translate'
 		'tmh.dynamicLocale'
 	]

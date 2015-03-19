@@ -2,7 +2,7 @@
 * @Author: UnS
 * @Date:   2015-02-12 17:11:22
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-03-11 10:51:10
+* @Last Modified time: 2015-03-19 11:51:25
 */
 
 define(['app', 'ng-map', 'map', 'async!http://maps.googleapis.com/maps/api/js?sensor=false'], function(app) {
