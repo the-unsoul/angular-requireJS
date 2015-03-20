@@ -11,8 +11,7 @@ note: pages which using JSON API won't work with github-pages. The sample only f
 
 
 # Installation:
-Install application dependencies
-Required:
+Install application dependencies:
  - [nodeJS](https://nodejs.org/download/) and npm
  - [gruntJS](http://gruntjs.com/)
  - [WebDriver Selenium](http://docs.seleniumhq.org/download/) (the requirement below are for e2e test only)
@@ -23,7 +22,7 @@ cd to project directory run:
 npm install
 ```
 
-#### end to end (e2e) protractor settup
+#### End to end (e2e) protractor settup
 
 require [Selenium Server] running along with JDK. 
 Check out [server-setup](http://angular.github.io/protractor/#/server-setup)
