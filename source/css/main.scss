@@ -39,18 +39,6 @@ $ico : 'icomoon';
 
 .angular-google-map-container { height: 600px; }
 #map_canvas img, .gmnoprint img{max-width:none}
-/* 
-==========================================================================
-   Foundation fixs
-========================================================================== 
-*/
-
-.no-js .tabs-content > .content.active{
-   display: block;
-}
-.no-js .tabs-content>.content{
-   display: none;
-}
 
 /* 
 ==========================================================================

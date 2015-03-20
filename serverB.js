@@ -8,8 +8,8 @@ var bodyParser = require('body-parser');
 var app = express();
 
 // view engine setup
-app.set('views', __dirname + '/source');
-app.engine('source', require('ejs').renderFile);
+app.set('views', __dirname + '/public');
+app.engine('public', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
@@ -17,7 +17,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'source')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -48,7 +48,7 @@ var debug = require('debug')('MyExpressServer:server');
 var http = require('http');
 var server = http.createServer(app);
 
-var port = parseInt(process.env.PORT, 10) || 3030;
+var port = parseInt(process.env.PORT, 10) || 3031;
 app.set('port', port);
 
 

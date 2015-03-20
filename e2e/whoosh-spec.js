@@ -2,7 +2,7 @@
 * @Author: UnS
 * @Date:   2015-03-10 10:23:11
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-03-11 18:39:47
+* @Last Modified time: 2015-03-20 11:33:39
 */
 
 describe('Whoosh page\'s functionalities', function() {

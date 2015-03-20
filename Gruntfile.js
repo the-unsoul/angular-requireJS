@@ -1,170 +1,172 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
-  // Project configuration.
-  grunt.initConfig({
-    // Metadata.
-    pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
-      '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-      '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-      '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-      ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
-    // Task configuration.
-    concat: {
-      options: {
-        banner: '<%= banner %>',
-        stripBanners: true
-      },
-      dist: {
-        src: ['lib/<%= pkg.name %>.js'],
-        dest: 'dist/<%= pkg.name %>.js'
-      }
-    },
-    coffee:{
-      compileBare:{
-        options:{
-          bare: true
-        },
-        files:{
-          'html/js/app.js': 'html/coffee/app.coffee',
-          'html/js/main.js': 'html/coffee/main.coffee'
-          // 'html/js/login.js': 'html/coffee/login.coffee'
-        }
-      }
-    },
-    uglify: {
-      options: {
-        banner: '<%= banner %>'
-      },
-      dist: {
-        src: '<%= concat.dist.dest %>',
-        dest: 'dist/<%= pkg.name %>.min.js'
-      }
-    },
-    jshint: {
-      options: {
-        curly: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        unused: true,
-        boss: true,
-        eqnull: true,
-        browser: true,
-        globals: {
-          jQuery: true
-        }
-      },
-      gruntfile: {
-        src: 'Gruntfile.js'
-      },
-    },
-    qunit: {
-      files: ['test/**/*.html']
-    },
-    watch: {
-      coffee:{
-        files: 'html/coffee/*.coffee',
-        tasks: ['coffee:compileBare']
-      }
-    },
-    copy: {
-      main: {
-        files: [
-          // includes files within path
-          {expand: true, src: ['path/*'], dest: 'dest/', filter: 'isFile'},
-
-          // includes files within path and its sub-directories
-          {expand: true, src: ['path/**'], dest: 'dest/'},
-
-          // makes all src relative to cwd
-          {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
-
-          // flattens results to a single level
-          {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'},
-        ],
-      },
-    },
-    karma:{
-      unit: {
-        configFile: 'test/config/karma.conf.js'
-      }
-    },
-    protractor: {
-      options: {
-        configFile: 'e2e-conf.js',
-        keepAlive: false,
-        noColor: true,
-        args: {
-          // args passed to the command
-        }
-      },
-      run: {
-
-      }
-    },
-    requirejs: {
-      compile: {
-        options: {
-          uglify2: {
-              mangle: false
-          },
-          baseUrl: "html/",
-          mainConfigFile: 'html/js/main.js',
-          // out: 'html/js/optimized.js',
-          optimize: 'uglify2',
-          modules: [
-            {
-              name: 'app',
-              include: [
-                'testCtrl'
-              ]
-            },{
-              name: 'loginCtrl'
+    // Project configuration.
+    grunt.initConfig({
+        // Metadata.
+        pkg: grunt.file.readJSON('package.json'),
+        banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
+            '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
+            '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
+            '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
+            ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
+        // Task configuration.
+        concat: {
+            options: {
+                banner: '<%= banner %>',
+                stripBanners: true
+            },
+            dist: {
+                src: ['lib/<%= pkg.name %>.js'],
+                dest: 'dist/<%= pkg.name %>.js'
             }
-          ]
-        }
-      }
-    },
-  });
+        },
+        jshint: {
+            options: {
+                curly: true,
+                eqeqeq: true,
+                immed: true,
+                latedef: true,
+                newcap: true,
+                noarg: true,
+                sub: true,
+                undef: true,
+                unused: true,
+                boss: true,
+                eqnull: true,
+                browser: true,
+                globals: {
+                    jQuery: true
+                }
+            },
+            gruntfile: {
+                src: 'Gruntfile.js'
+            },
+        },
+        watch: {
+            coffee: {
+                files: 'source/coffee/*.coffee',
+                tasks: ['coffee:compileBare']
+            }
+        },
+        copy: {
+            css: {
+                cwd: 'source/css/',
+                src: '*.css',
+                expand: true,
+                dest: 'public/css/',
+                flatten: true,
+                filter: 'isFile'
+            },
+            img: {
+                cwd: 'source/img/',
+                src: '**',
+                expand: true,
+                dest: 'public/img/',
+                flatten: true,
+                filter: 'isFile'
+            },
+            views: {
+                cwd: 'source/views/',
+                src: '**',
+                expand: true,
+                dest: 'public/views/',
+                flatten: true,
+                filter: 'isFile'
+            },
+            html: {
+                cwd: 'source/',
+                src: '*.html',
+                expand: true,
+                dest: 'public/',
+                flatten: true,
+                filter: 'isFile'
+            }
+        },
+        uglify: {
+            my_target:{
+                files:{
+                    // 'public/css/main.css': ['public/css/bootstrap.css', 'public/css/normalize.min.css', 'public/css/animate.css', 'public/css/main.css' ]
+                }
+            }
+        },
+        cssmin: {
+            target:{
+                files:{
+                    'public/css/main.css': ['public/css/main.css' ],
+                    'public/css/bootstrap.css': ['public/css/bootstrap.css'], 
+                    'public/css/normalize.min.css': ['public/css/normalize.min.css'],
+                    'public/css/animate.css': ['public/css/animate.css'] 
+                }
+            }
+        },
+        karma: {
+            unit: {
+                configFile: 'test/config/karma.conf.js'
+            }
+        },
+        protractor: {
+            options: {
+                configFile: 'e2e-conf.js',
+                keepAlive: false,
+                noColor: true,
+                args: {
+                    // args passed to the command
+                }
+            },
+            run: {
 
-  // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-coffee');
-  grunt.loadNpmTasks('grunt-contrib-requirejs');
-  grunt.loadNpmTasks('grunt-karma');
-  grunt.loadNpmTasks('grunt-protractor-runner');
+            }
+        },
+        requirejs: {
+            compile: {
+                options: {
+                    baseUrl: "source/js",
+                    mainConfigFile: "source/js/main.js",
+                    optimize: "uglify2",
+                    dir: 'public/js/',
+                    modules: [{
+                        name: 'main'
+                    }]
+                }
+            }
+        },
+    });
+
+    // These plugins provide necessary tasks.
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
+    grunt.loadNpmTasks('grunt-karma');
+    grunt.loadNpmTasks('grunt-protractor-runner');
 
 
-  // Default task.
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'coffee']);
+    // Default task.
+    grunt.registerTask('default', ['build']);
+    grunt.registerTask('build', ['optimize', 'copy', 'cssmin']);
 
-  // watch js
-  grunt.registerTask('watchjs', ['watch:coffee']);
+    // watch js
 
-  // watch css
-  grunt.registerTask('watchcss', []);
+    // watch css
+    grunt.registerTask('watchcss', []);
 
-  // Unit testing - Karma - Jasmine
-  grunt.registerTask('unit', ['karma:unit']);
 
-  // e2e testing - Protractor
-  grunt.registerTask('e2e', ['protractor']);
-  
-  // both tests(?)
-  grunt.registerTask('test', ['unit', 'e2e']);
+    // Unit testing - Karma - Jasmine
+    grunt.registerTask('unit', ['karma:unit']);
 
-  // r.js optimize
-  grunt.registerTask('optimize', ['requirejs']);
+    // e2e testing - Protractor
+    grunt.registerTask('e2e', ['protractor']);
+
+    // both tests(?)
+    grunt.registerTask('test', ['unit', 'e2e']);
+
+
+    // r.js optimize
+    grunt.registerTask('optimize', ['requirejs']);
+    // uglify
 
 };
-

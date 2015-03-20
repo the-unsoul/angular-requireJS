@@ -16,11 +16,11 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       {pattern: 'bower_components/**/*.js', included: false},
-      {pattern: 'html/js/vendor/**/*.js', included: false},
-      {pattern: 'html/js/vendor/*.js', included: false},
-      {pattern: 'html/js/controllers/*.js', included: false},
-      {pattern: 'html/js/services/*.js', included: false},
-      {pattern: 'html/js/*.js', included: false},
+      {pattern: 'source/js/vendor/**/*.js', included: false},
+      {pattern: 'source/js/vendor/*.js', included: false},
+      {pattern: 'source/js/controllers/*.js', included: false},
+      {pattern: 'source/js/services/*.js', included: false},
+      {pattern: 'source/js/*.js', included: false},
       {pattern: 'test/*.js', included: false},
       {pattern: 'test/**/*.js', included: false},
       'http://maps.googleapis.com/maps/api/js?sensor=false',
