@@ -1,2 +1,1 @@
-require('./angular-locale_en-gm');
-module.exports = 'ngLocale';
+require("./angular-locale_en-gm"),module.exports="ngLocale";

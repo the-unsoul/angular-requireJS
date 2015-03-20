@@ -1,2 +1,1 @@
-require('./angular-locale_tig');
-module.exports = 'ngLocale';
+require("./angular-locale_tig"),module.exports="ngLocale";

@@ -1,2 +1,1 @@
-require('./angular-locale_kk');
-module.exports = 'ngLocale';
+require("./angular-locale_kk"),module.exports="ngLocale";

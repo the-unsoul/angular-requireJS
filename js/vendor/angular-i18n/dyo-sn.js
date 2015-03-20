@@ -1,2 +1,1 @@
-require('./angular-locale_dyo-sn');
-module.exports = 'ngLocale';
+require("./angular-locale_dyo-sn"),module.exports="ngLocale";

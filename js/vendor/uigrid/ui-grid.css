@@ -134,7 +134,6 @@
 .ui-grid-column-menu {
   position: absolute;
 }
-/* Slide up/down animations */
 .ui-grid-column-menu .ui-grid-menu .ui-grid-menu-mid.ng-hide-add,
 .ui-grid-column-menu .ui-grid-menu .ui-grid-menu-mid.ng-hide-remove {
   -webkit-transition: all 0.05s linear;
@@ -159,7 +158,6 @@
   -ms-transform: translateY(0);
   transform: translateY(0);
 }
-/* Slide up/down animations */
 .ui-grid-menu-button .ui-grid-menu .ui-grid-menu-mid.ng-hide-add,
 .ui-grid-menu-button .ui-grid-menu .ui-grid-menu-mid.ng-hide-remove {
   -webkit-transition: all 0.05s linear;
@@ -540,16 +538,6 @@ input[type="text"].ui-grid-filter-input:hover {
   font-weight: normal;
   font-style: normal;
 }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'ui-grid';
-    src: url('../font/ui-grid.svg?12312827#ui-grid') format('svg');
-  }
-}
-*/
 [class^="ui-grid-icon"]:before,
 [class*=" ui-grid-icon"]:before {
   font-family: "ui-grid";
@@ -561,27 +549,24 @@ input[type="text"].ui-grid-filter-input:hover {
   width: 1em;
   margin-right: .2em;
   text-align: center;
-  /* opacity: .8; */
-  /* For safety - reset parent styles, that can break glyph codes*/
+  
+  
   font-variant: normal;
   text-transform: none;
-  /* fix buttons height, for twitter bootstrap */
+  
   line-height: 1em;
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
+  
+  
   margin-left: .2em;
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  
+  
+  
+  
 }
 .ui-grid-icon-blank::before {
   width: 1em;
   content: ' ';
 }
-/*
-* RTL Styles
-*/
 .ui-grid[dir=rtl] .ui-grid-header-cell,
 .ui-grid[dir=rtl] .ui-grid-footer-cell,
 .ui-grid[dir=rtl] .ui-grid-cell {
@@ -639,9 +624,6 @@ input[type="text"].ui-grid-filter-input:hover {
   right: initial;
   left: 10px;
 }
-/*
-   Animation example, for spinners
-*/
 .ui-grid-animate-spin {
   -moz-animation: ui-grid-spin 2s infinite linear;
   -o-animation: ui-grid-spin 2s infinite linear;
@@ -719,87 +701,10 @@ input[type="text"].ui-grid-filter-input:hover {
     transform: rotate(359deg);
   }
 }
-/*---------------------------------------------------
-    LESS Elements 0.9
-  ---------------------------------------------------
-    A set of useful LESS mixins
-    More info at: http://lesselements.com
-  ---------------------------------------------------*/
-/* This file contains variable declarations (do not remove this line) */
-/*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
-/**
-* @section Grid styles
-*/
-/**
-* @section Header styles
-*/
-/** @description Colors for header gradient */
-/**
-* @section Grid body styles
-*/
-/** @description Colors used for row alternation */
-/**
-* @section Sort arrow colors
-*/
-/**
-* @section Scrollbar styles
-*/
-/**
-* @section font library path
-*/
-/*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
-
-/* This file contains variable declarations (do not remove this line) */
-/*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
-/**
-* @section Grid styles
-*/
-/**
-* @section Header styles
-*/
-/** @description Colors for header gradient */
-/**
-* @section Grid body styles
-*/
-/** @description Colors used for row alternation */
-/**
-* @section Sort arrow colors
-*/
-/**
-* @section Scrollbar styles
-*/
-/**
-* @section font library path
-*/
-/*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
 .ui-grid-cell-focus {
   outline: 0;
   background-color: #b3c4c7;
 }
-
-/* This file contains variable declarations (do not remove this line) */
-/*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
-/**
-* @section Grid styles
-*/
-/**
-* @section Header styles
-*/
-/** @description Colors for header gradient */
-/**
-* @section Grid body styles
-*/
-/** @description Colors used for row alternation */
-/**
-* @section Sort arrow colors
-*/
-/**
-* @section Scrollbar styles
-*/
-/**
-* @section font library path
-*/
-/*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
 div.ui-grid-cell input {
   border-radius: inherit;
   padding: 0;
@@ -823,108 +728,12 @@ div.ui-grid-cell input.ng-invalid {
 div.ui-grid-cell input.ng-valid {
   border: 1px solid #d4d4d4;
 }
-
-/* This file contains variable declarations (do not remove this line) */
-/*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
-/**
-* @section Grid styles
-*/
-/**
-* @section Header styles
-*/
-/** @description Colors for header gradient */
-/**
-* @section Grid body styles
-*/
-/** @description Colors used for row alternation */
-/**
-* @section Sort arrow colors
-*/
-/**
-* @section Scrollbar styles
-*/
-/**
-* @section font library path
-*/
-/*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
 .expandableRow .ui-grid-row:nth-child(odd) .ui-grid-cell {
   background-color: #fdfdfd;
 }
 .expandableRow .ui-grid-row:nth-child(even) .ui-grid-cell {
   background-color: #f3f3f3;
 }
-
-/* This file contains variable declarations (do not remove this line) */
-/*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
-/**
-* @section Grid styles
-*/
-/**
-* @section Header styles
-*/
-/** @description Colors for header gradient */
-/**
-* @section Grid body styles
-*/
-/** @description Colors used for row alternation */
-/**
-* @section Sort arrow colors
-*/
-/**
-* @section Scrollbar styles
-*/
-/**
-* @section font library path
-*/
-/*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
-
-/* This file contains variable declarations (do not remove this line) */
-/*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
-/**
-* @section Grid styles
-*/
-/**
-* @section Header styles
-*/
-/** @description Colors for header gradient */
-/**
-* @section Grid body styles
-*/
-/** @description Colors used for row alternation */
-/**
-* @section Sort arrow colors
-*/
-/**
-* @section Scrollbar styles
-*/
-/**
-* @section font library path
-*/
-/*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
-
-/* This file contains variable declarations (do not remove this line) */
-/*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
-/**
-* @section Grid styles
-*/
-/**
-* @section Header styles
-*/
-/** @description Colors for header gradient */
-/**
-* @section Grid body styles
-*/
-/** @description Colors used for row alternation */
-/**
-* @section Sort arrow colors
-*/
-/**
-* @section Scrollbar styles
-*/
-/**
-* @section font library path
-*/
-/*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
 .movingColumn {
   position: fixed;
   border: 1px solid #d4d4d4;
@@ -933,7 +742,6 @@ div.ui-grid-cell input.ng-valid {
 .movingColumn .ui-grid-icon-angle-down {
   display: none;
 }
-
 .ui-grid-pager-panel {
   position: absolute;
   left: 0;
@@ -1016,30 +824,6 @@ div.ui-grid-cell input.ng-valid {
   margin-left: 10px;
   float: right;
 }
-
-/* This file contains variable declarations (do not remove this line) */
-/*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
-/**
-* @section Grid styles
-*/
-/**
-* @section Header styles
-*/
-/** @description Colors for header gradient */
-/**
-* @section Grid body styles
-*/
-/** @description Colors used for row alternation */
-/**
-* @section Sort arrow colors
-*/
-/**
-* @section Scrollbar styles
-*/
-/**
-* @section font library path
-*/
-/*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
 .ui-grid-pinned-container {
   float: left;
 }
@@ -1100,30 +884,6 @@ div.ui-grid-cell input.ng-valid {
 .ui-grid-render-container-body {
   float: left;
 }
-
-/* This file contains variable declarations (do not remove this line) */
-/*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
-/**
-* @section Grid styles
-*/
-/**
-* @section Header styles
-*/
-/** @description Colors for header gradient */
-/**
-* @section Grid body styles
-*/
-/** @description Colors used for row alternation */
-/**
-* @section Sort arrow colors
-*/
-/**
-* @section Scrollbar styles
-*/
-/**
-* @section font library path
-*/
-/*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
 .ui-grid-column-resizer {
   top: 0;
   bottom: 0;
@@ -1147,30 +907,6 @@ div.ui-grid-cell input.ng-valid {
   width: 1px;
   background-color: #aeaeae;
 }
-
-/* This file contains variable declarations (do not remove this line) */
-/*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
-/**
-* @section Grid styles
-*/
-/**
-* @section Header styles
-*/
-/** @description Colors for header gradient */
-/**
-* @section Grid body styles
-*/
-/** @description Colors used for row alternation */
-/**
-* @section Sort arrow colors
-*/
-/**
-* @section Scrollbar styles
-*/
-/**
-* @section font library path
-*/
-/*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
 .ui-grid-row-saving .ui-grid-cell {
   color: #848484 !important;
 }
@@ -1180,30 +916,6 @@ div.ui-grid-cell input.ng-valid {
 .ui-grid-row-error .ui-grid-cell {
   color: #ff0000 !important;
 }
-
-/* This file contains variable declarations (do not remove this line) */
-/*-- VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
-/**
-* @section Grid styles
-*/
-/**
-* @section Header styles
-*/
-/** @description Colors for header gradient */
-/**
-* @section Grid body styles
-*/
-/** @description Colors used for row alternation */
-/**
-* @section Sort arrow colors
-*/
-/**
-* @section Scrollbar styles
-*/
-/**
-* @section font library path
-*/
-/*-- END VARIABLES (DO NOT REMOVE THESE COMMENTS) --*/
 .ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell {
   background-color: #c9dde1 !important;
 }
@@ -1226,88 +938,66 @@ div.ui-grid-cell input.ng-valid {
 .ui-grid-selection-row-header-buttons.ui-grid-all-selected {
   opacity: 1;
 }
-
 .ui-grid-icon-plus-squared:before {
   content: '\c350';
 }
-/* '썐' */
 .ui-grid-icon-minus-squared:before {
   content: '\c351';
 }
-/* '썑' */
 .ui-grid-icon-search:before {
   content: '\c352';
 }
-/* '썒' */
 .ui-grid-icon-cancel:before {
   content: '\c353';
 }
-/* '썓' */
 .ui-grid-icon-info-circled:before {
   content: '\c354';
 }
-/* '썔' */
 .ui-grid-icon-lock:before {
   content: '\c355';
 }
-/* '썕' */
 .ui-grid-icon-lock-open:before {
   content: '\c356';
 }
-/* '썖' */
 .ui-grid-icon-pencil:before {
   content: '\c357';
 }
-/* '썗' */
 .ui-grid-icon-down-dir:before {
   content: '\c358';
 }
-/* '썘' */
 .ui-grid-icon-up-dir:before {
   content: '\c359';
 }
-/* '썙' */
 .ui-grid-icon-left-dir:before {
   content: '\c35a';
 }
-/* '썚' */
 .ui-grid-icon-right-dir:before {
   content: '\c35b';
 }
-/* '썛' */
 .ui-grid-icon-left-open:before {
   content: '\c35c';
 }
-/* '썜' */
 .ui-grid-icon-right-open:before {
   content: '\c35d';
 }
-/* '썝' */
 .ui-grid-icon-angle-down:before {
   content: '\c35e';
 }
-/* '썞' */
 .ui-grid-icon-filter:before {
   content: '\c35f';
 }
-/* '썟' */
 .ui-grid-icon-sort-alt-up:before {
   content: '\c360';
 }
-/* '썠' */
 .ui-grid-icon-sort-alt-down:before {
   content: '\c361';
 }
-/* '썡' */
 .ui-grid-icon-ok:before {
   content: '\c362';
 }
-/* '썢' */
 .ui-grid-icon-menu:before {
   content: '\c363';
 }
-/* '썣' */
 .ui-grid-icon-spin5:before {
   content: '\ea61';
 }
-/* '' */

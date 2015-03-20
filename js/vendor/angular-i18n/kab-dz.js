@@ -1,2 +1,1 @@
-require('./angular-locale_kab-dz');
-module.exports = 'ngLocale';
+require("./angular-locale_kab-dz"),module.exports="ngLocale";

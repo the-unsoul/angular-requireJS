@@ -1,2 +1,1 @@
-require('./angular-locale_vai-vaii');
-module.exports = 'ngLocale';
+require("./angular-locale_vai-vaii"),module.exports="ngLocale";

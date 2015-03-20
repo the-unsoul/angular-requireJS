@@ -1,2 +1,1 @@
-require('./angular-locale_ts-za');
-module.exports = 'ngLocale';
+require("./angular-locale_ts-za"),module.exports="ngLocale";

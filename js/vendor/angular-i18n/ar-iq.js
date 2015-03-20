@@ -1,2 +1,1 @@
-require('./angular-locale_ar-iq');
-module.exports = 'ngLocale';
+require("./angular-locale_ar-iq"),module.exports="ngLocale";

@@ -1,2 +1,1 @@
-require('./angular-locale_kam-ke');
-module.exports = 'ngLocale';
+require("./angular-locale_kam-ke"),module.exports="ngLocale";

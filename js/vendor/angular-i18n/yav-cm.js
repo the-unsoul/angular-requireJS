@@ -1,2 +1,1 @@
-require('./angular-locale_yav-cm');
-module.exports = 'ngLocale';
+require("./angular-locale_yav-cm"),module.exports="ngLocale";

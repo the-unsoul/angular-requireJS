@@ -1,2 +1,1 @@
-require('./angular-locale_lag-tz');
-module.exports = 'ngLocale';
+require("./angular-locale_lag-tz"),module.exports="ngLocale";

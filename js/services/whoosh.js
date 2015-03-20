@@ -1,16 +1,1 @@
-/* 
-* @Author: UnS
-* @Date:   2015-02-27 11:31:01
-* @Last Modified by:   UnS
-* @Last Modified time: 2015-03-10 15:12:27
-*/
-
-define(['app'], function(app) {
-	app.factory('whooshResource', ['WHOOSH','$resource', function(WHOOSH, $resource){
-		return $resource(
-			WHOOSH.APIurl + '/:action',
-		 	{action: WHOOSH.actions.posts}, 
-		 	WHOOSH.methods
- 		);	
-	}]);
-});
+define(["app"],function(o){o.factory("whooshResource",["WHOOSH","$resource",function(o,n){return n(o.APIurl+"/:action",{action:o.actions.posts},o.methods)}])});

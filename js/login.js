@@ -1,1 +1,1 @@
-require(['app'], function(app) {});
+require(["app"],function(){});

@@ -1,2 +1,1 @@
-require('./angular-locale_ha-latn');
-module.exports = 'ngLocale';
+require("./angular-locale_ha-latn"),module.exports="ngLocale";

@@ -1,2 +1,1 @@
-require('./angular-locale_uz-cyrl-uz');
-module.exports = 'ngLocale';
+require("./angular-locale_uz-cyrl-uz"),module.exports="ngLocale";

@@ -1,0 +1,7 @@
+/*
+ * Copyright 2013 Ivan Pusic
+ * Contributors:
+ *   Matjaz Lipus
+ */
+
+angular.module("ivpusic.cookie",["ipCookie"]),angular.module("ipCookie",["ng"]).factory("ipCookie",["$document",function(e){function i(e){try{return decodeURIComponent(e)}catch(i){}}return function(){function n(n,t,r){var o,s,p,u,a,c,x,d,f;if(r=r||{},void 0!==t)return t="object"==typeof t?JSON.stringify(t):String(t),"number"==typeof r.expires&&(f=r.expires,r.expires=new Date,-1===f?r.expires=new Date("Thu, 01 Jan 1970 00:00:00 GMT"):void 0!==r.expirationUnit?"hours"===r.expirationUnit?r.expires.setHours(r.expires.getHours()+f):"minutes"===r.expirationUnit?r.expires.setMinutes(r.expires.getMinutes()+f):"seconds"===r.expirationUnit?r.expires.setSeconds(r.expires.getSeconds()+f):r.expires.setDate(r.expires.getDate()+f):r.expires.setDate(r.expires.getDate()+f)),e[0].cookie=[encodeURIComponent(n),"=",encodeURIComponent(t),r.expires?"; expires="+r.expires.toUTCString():"",r.path?"; path="+r.path:"",r.domain?"; domain="+r.domain:"",r.secure?"; secure":""].join("");for(s=[],d=e[0].cookie,d&&(s=d.split("; ")),o={},x=!1,p=0;p<s.length;++p)if(s[p]){if(u=s[p],a=u.indexOf("="),c=u.substring(0,a),t=i(u.substring(a+1)),angular.isUndefined(t))continue;if(void 0===n||n===c){try{o[c]=JSON.parse(t)}catch(g){o[c]=t}if(n===c)return o[c];x=!0}}return x&&void 0===n?o:void 0}return n.remove=function(e,i){var t=void 0!==n(e);return t&&(i||(i={}),i.expires=-1,n(e,"",i)),t},n}()}]);

@@ -1,2 +1,1 @@
-require('./angular-locale_nso-za');
-module.exports = 'ngLocale';
+require("./angular-locale_nso-za"),module.exports="ngLocale";

@@ -1,2 +1,1 @@
-require('./angular-locale_swc-cd');
-module.exports = 'ngLocale';
+require("./angular-locale_swc-cd"),module.exports="ngLocale";
