@@ -1,8 +1,8 @@
 define([
     'angularAMD', 
     'translations', 
-    'ng-token-auth', 
     'angular-cookie', 
+    'ng-token-auth', 
     'ng-animate', 
     'angular-route', 
     'angular-resource', 
@@ -17,7 +17,8 @@ define([
         'ngResource', 
         'ui.bootstrap', 
         'pascalprecht.translate', 
-        'tmh.dynamicLocale'
+        'tmh.dynamicLocale',
+        'ng-token-auth',
     ]);
 
     /* ------ {{ config }} ------------------------------------ */

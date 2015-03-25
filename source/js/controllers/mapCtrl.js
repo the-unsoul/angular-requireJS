@@ -2,7 +2,7 @@
 * @Author: UnS
 * @Date:   2015-02-12 17:11:22
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-03-19 11:51:25
+* @Last Modified time: 2015-03-25 15:37:38
 */
 
 define(['app', 'ng-map', 'map', 'async!http://maps.googleapis.com/maps/api/js?sensor=false'], function(app) {
@@ -21,26 +21,26 @@ define(['app', 'ng-map', 'map', 'async!http://maps.googleapis.com/maps/api/js?se
 			return "pushed: "+markers.length+ " markers to local strore";
 		};
 		
-		var doneInitMaker = function(msg) {
+		var calcMaker = function(msg) {
 			console.log(msg);	
 			$scope.bounds = new google.maps.LatLngBounds();
 			for(var i = 0; i < $scope.coords.length; i ++){
 				$scope.bounds.extend($scope.coords[i]);
 			}
-			$scope.map.center = {latitude: $scope.bounds.getCenter().k, longitude: $scope.bounds.getCenter().D};
+			$scope.map.center = {latitude: $scope.bounds.getCenter().lat(), longitude: $scope.bounds.getCenter().lng()};
 			$scope.fitBounds = {
-				northeast: {latitude: $scope.bounds.va.j, longitude: $scope.bounds.va.k},
-				southwest : {latitude: $scope.bounds.Ca.j, longitude: $scope.bounds.Ca.k}
+				northeast: {latitude: $scope.bounds.getNorthEast().lat(), longitude: $scope.bounds.getNorthEast().lng()},
+				southwest : {latitude: $scope.bounds.getSouthWest().lat(), longitude: $scope.bounds.getSouthWest().lng()}
 			};
 		};
 
 		mapServices.getMarkers('markers')
 			.then(addMarker, mapServices.errorHandler)
-			.then(doneInitMaker, mapServices.errorHandler);
+			.then(calcMaker, mapServices.errorHandler);
 
 		$scope.$watch('markers', function(nv, ov) {
 			if(nv != ov){
-				console.log('$watch: markers fetched');
+				console.log('$watch: \'$scope.markers\' fetched');
 			}
 		});
 	}]);

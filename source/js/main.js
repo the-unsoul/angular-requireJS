@@ -21,7 +21,7 @@ requirejs.config({
         'angular-translate' : 'vendor/angular-translate/angular-translate.min',
         'dynamic-locale'    : 'vendor/angular-dynamic-locale/tmhDynamicLocale',
         'ng-token-auth'     : 'vendor/ng-token-auth/dist/ng-token-auth.min',
-        'angular-cookie'    : 'vendor/angular-cookie/angular-cookie.min',
+        'angular-cookie'    : 'vendor/angular/angular-cookies',
 
         // controllers
         testCtrl            : 'controllers/testCtrl',
@@ -51,8 +51,8 @@ requirejs.config({
         'angular-translate' : ['angular'],
         'dynamic-locale'    : ['angular'],
         'ng-map'            : ['lodash', 'angular'],
-        'ng-token-auth'     : ['angular'],
         'angular-cookie'    : ['angular'],
+        'ng-token-auth'     : ['angular-cookie'],
         'locale'            : ['angular'],
 
         // export

@@ -1,9 +1,9 @@
 /*
-////////////////////////////////////////////////////////
-// Html5 template using HTML5boilerplate + foundation //
-// Created and store by Unsoul                        //
-// Email: duylinh20032003@yahoo.com                   //
-////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+// Html5 template using HTML5boilerplate + Bootstrap  + Less + Angular + requireJS  //
+// Author: UnS                                                                      //
+// Email: duylinh20032003@yahoo.com                                                 //
+//////////////////////////////////////////////////////////////////////////////////////
 */
 /* 
 ==========================================================================
@@ -11,11 +11,12 @@
 ========================================================================== 
 */
 .angular-google-map-container {
-  height: 600px; }
-
-#map_canvas img, .gmnoprint img {
-  max-width: none; }
-
+  height: 600px;
+}
+#map_canvas img,
+.gmnoprint img {
+  max-width: none;
+}
 /* 
 ==========================================================================
    Media Queries
@@ -26,35 +27,40 @@
    Helper classes
 ========================================================================== 
 */
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
-.ng-cloak, .x-ng-cloak,
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak,
 .ng-hide:not(.ng-hide-animate) {
-  display: none !important; }
-
+  display: none !important;
+}
 ng\:form {
-  display: block; }
-
+  display: block;
+}
 .company {
-  color: #fff; }
-
+  color: #fff;
+}
 .company:hover {
-  color: #f87a0f; }
-
+  color: #f87a0f;
+}
 .ir {
   background-color: transparent;
   border: 0;
   overflow: hidden;
-  *text-indent: -9999px; }
-  .ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%; }
-
+  *text-indent: -9999px;
+}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
 .hidden {
   display: none !important;
-  visibility: hidden; }
-
+  visibility: hidden;
+}
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -63,45 +69,49 @@ ng\:form {
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 1px; }
-  .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto; }
-
+  width: 1px;
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
 .invisible {
-  visibility: hidden; }
-
+  visibility: hidden;
+}
 .clearfix {
-  *zoom: 1; }
-  .clearfix:before {
-    content: " ";
-    display: table; }
-  .clearfix:after {
-    content: " ";
-    display: table;
-    clear: both; }
-
+  *zoom: 1;
+}
+.clearfix:before {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
-
+  user-select: none;
+}
 a {
-  text-decoration: none; }
-
+  text-decoration: none;
+}
 .fullWidth {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: initial; }
-
+  max-width: initial;
+}
 /* 
 ==========================================================================
    Print styles
@@ -112,45 +122,53 @@ a {
     background: transparent !important;
     color: #000 !important;
     box-shadow: none !important;
-    text-shadow: none !important; }
-
+    text-shadow: none !important;
+  }
   a {
-    text-decoration: underline; }
-    a:visited {
-      text-decoration: underline; }
-    a[href]:after {
-      content: " (" attr(href) ")"; }
-
+    text-decoration: underline;
+  }
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
   abbr[title]:after {
-    content: " (" attr(title) ")"; }
-
+    content: " (" attr(title) ")";
+  }
   .ir a:after {
-    content: ""; }
-
-  a[href^="javascript:"]:after, a[href^="#"]:after {
-    content: ""; }
-
-  pre, blockquote {
+    content: "";
+  }
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
     border: 1px solid #999;
-    page-break-inside: avoid; }
-
+    page-break-inside: avoid;
+  }
   thead {
-    display: table-header-group; }
-
+    display: table-header-group;
+  }
   tr {
-    page-break-inside: avoid; }
-
+    page-break-inside: avoid;
+  }
   img {
     page-break-inside: avoid;
-    max-width: 100% !important; }
-
+    max-width: 100% !important;
+  }
   @page {
-    margin: .5cm; }
-  p, h2, h3 {
+    margin: .5cm;
+  }
+  p,
+  h2,
+  h3 {
     orphans: 3;
-    widows: 3; }
-
-  h2, h3 {
-    page-break-after: avoid; } }
-
-/*# sourceMappingURL=main.css.map */
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

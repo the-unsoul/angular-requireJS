@@ -1,0 +1,83 @@
+Controller list: 
+ ☐ Menu controller
+ ☐ Home controller
+ ☐ Account controller
+
+
+
+Research:
+ ☐ READ MORE this document https://parkeon.jira.com/wiki/display/MPP/Payment
+   ☐ try to Create token with Ogone service https://parkeon.jira.com/wiki/display/MPP/Payment
+     ☐ document at  https://parkeon.jira.com/wiki/display/MPP/OGONE+Documentation with DirectLink-3-D
+     ☐ 
+
+ ☐ OR ABOUT THIS https://parkeon.jira.com/wiki/display/MPP/PCI+v3+compliance
+
+
+ ☐ call : https://ogone.test.v-psp.com/Tokenization/HostedPage
+
+ ☐ example link: https://ogone.test.v-psp.com/Tokenization/HostedPage?Account.PSPID=mpptis1917cannes&Alias.AliasId=tisurbankikonew&Alias.OrderId=7895&Alias.StorePermanently=Y&Card.Brand=VISA&Layout.Language=en_US&Parameters.AcceptUrl=https://my-tis.parkeon.whooshstore.com/FR/parking/payment_callback&Parameters.ExceptionUrl=https://my-tis.parkeon.whooshstore.com/FR/parking/payment_error&ShaSignature.ShaSign=C648BC72CABB5FD9044ED7B9478
+
+ ☐ The iframe build on the params that it recived. https://parkeon.jira.com/wiki/pages/viewpage.action?spaceKey=MPP&title=PCI+v3+compliance
+
+ ☐ Also require SHA-sign of params and link to be accessed http://payment-services.ingenico.com/int/en/ogone/support/guides/integration%20guides/hosted-tokenization-page
+   @problem can't generate SHA-SIGN due to missing 'passphrase' identity
+
+
+ ☐ 
+
+
+
+
+
+
+1.FLOWS: 
+  ☐ STEP 1: https://api-integration.parkeon.whooshstore.com/tm/whooshstore.com/search/pnd/grouping/?latitude=43.576382&longitude=7.121219&distance=2 
+    -> get a list of nearest parks
+    -> @User auth
+
+  ☐ STEP 2:  http://api-integration.parkeon.whooshstore.com/tm/whooshstore.com/search/parkFacility/
+    -> or get a list of parks 
+    -> @Admin auth
+
+  ☐ STEP 3:  in PnD detail use the ID feild to get the ID number in the link
+    -> e.g. "id": "http://api-integration.parkeon.whooshstore.com/tm/whooshstore.com/parkFacility/v1/12352/"
+    -> the number "12352" will be the id for accessing PSP
+    -> @note: only ID: 12352 providing legit info which usable in requesting Ogone form. And DO NOT TRY TO LOGIN INTO THE OGONE ACCOUNT WITH THE PROVIDING PASSWORD.
+
+  ☐ STEP 4: http://api-integration.parkeon.whooshstore.com/tm/whooshstore.com/parkFacility/v1/12352/PSP/
+    -> send GET request to API to get info of PSP with ID:12352 the "shaInKey" for endcoding request URL of Ogone form
+    -> @Admin auth
+
+  ☐ STEP 5: useful info
+    -> "shaInKey": "0123456789abcdef",
+    -> "merchantId": "mppintegcity5cannes",
+    -> These info are required to generate the request url. 
+
+  ☐ STEP 6: Generating request URL
+    -> Check link below
+    -> http://payment-services.ingenico.com/int/en/ogone/support/guides/integration%20guides/hosted-tokenization-page#shain
+
+  ☐ STEP 7: Send request to the generated URL in an iframe.
+    -> recived Ogone's form.
+    -> User fill up feild.
+    -> Submit
+    -> callback to either AcceptUrl or ExceptionUrl will be call after Ogone get the submited info.
+
+  ☐ Step 8: ...?
+
+
+
+
+ ☐ @side-note: 
+  -> So far there's only one "account" and one "shaInKey" work on requesting Ogone form for testing. Use the link below to recive. (the same one in step 4 of FLOWS above)
+  -> http://api-integration.parkeon.whooshstore.com/tm/whooshstore.com/parkFacility/v1/12352/PSP/
+  
+
+
+
+2.CONCERN: 
+  There're sensitive info in these requesting and the authority of Admin:
+     - In Step 4. The reciving info will contant Ogone account's info. With ID, password and secret passphare
+     - And authority of WHOOSH's admin is required in Step: 2 and 4 for the API call.
+

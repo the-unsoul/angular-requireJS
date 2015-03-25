@@ -43,10 +43,26 @@ module.exports = function(grunt) {
                 src: 'Gruntfile.js'
             },
         },
+        less: {
+            development: {
+                options: {
+                    paths: ["source/css"]
+                },
+                files: {
+                    "source/css/animate.css": "source/css/animate.less",
+                    "source/css/main.css": "source/css/main.less",
+                }
+            },
+            bootstrap: {
+                files: {
+                    "source/css/bootstrap.css": "source/css/bootstrap/bootstrap.less",
+                }
+            }
+        },
         watch: {
-            coffee: {
-                files: 'source/coffee/*.coffee',
-                tasks: ['coffee:compileBare']
+            less: {
+                files: 'source/css/*.less',
+                tasks: ['less:development']
             }
         },
         copy: {
@@ -84,19 +100,19 @@ module.exports = function(grunt) {
             }
         },
         uglify: {
-            my_target:{
-                files:{
+            my_target: {
+                files: {
                     // 'public/css/main.css': ['public/css/bootstrap.css', 'public/css/normalize.min.css', 'public/css/animate.css', 'public/css/main.css' ]
                 }
             }
         },
         cssmin: {
-            target:{
-                files:{
-                    'public/css/main.css': ['public/css/main.css' ],
-                    'public/css/bootstrap.css': ['public/css/bootstrap.css'], 
+            target: {
+                files: {
+                    'public/css/main.css': ['public/css/main.css'],
+                    'public/css/bootstrap.css': ['public/css/bootstrap.css'],
                     'public/css/normalize.min.css': ['public/css/normalize.min.css'],
-                    'public/css/animate.css': ['public/css/animate.css'] 
+                    'public/css/animate.css': ['public/css/animate.css']
                 }
             }
         },
@@ -139,6 +155,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-karma');
@@ -148,8 +165,6 @@ module.exports = function(grunt) {
     // Default task.
     grunt.registerTask('default', ['build']);
     grunt.registerTask('build', ['optimize', 'copy', 'cssmin']);
-
-    // watch js
 
     // watch css
     grunt.registerTask('watchcss', []);
