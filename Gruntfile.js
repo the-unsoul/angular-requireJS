@@ -46,23 +46,27 @@ module.exports = function(grunt) {
         less: {
             development: {
                 options: {
-                    paths: ["source/css"]
+                    paths: ["source/less"]
                 },
                 files: {
-                    "source/css/animate.css": "source/css/animate.less",
-                    "source/css/main.css": "source/css/main.less",
+                    "source/css/animate.css": "source/less/animate.less",
+                    "source/css/main.css": "source/less/main.less",
                 }
             },
             bootstrap: {
                 files: {
-                    "source/css/bootstrap.css": "source/css/bootstrap/bootstrap.less",
+                    "source/css/bootstrap.css": "source/less/bootstrap/bootstrap.less",
                 }
             }
         },
         watch: {
             less: {
-                files: 'source/css/*.less',
+                files: ['source/less/main.less', 'source/less/animate.less', 'source/less/_functions.less'],
                 tasks: ['less:development']
+            },
+            bootstrap: {
+                files: 'source/less/setting.less',
+                tasks: ['less:bootstrap']
             }
         },
         copy: {
@@ -164,11 +168,12 @@ module.exports = function(grunt) {
 
     // Default task.
     grunt.registerTask('default', ['build']);
-    grunt.registerTask('build', ['optimize', 'copy', 'cssmin']);
+    grunt.registerTask('build', ['less', 'optimize', 'copy', 'cssmin']);
 
-    // watch css
-    grunt.registerTask('watchcss', []);
-
+    // build bootstrap
+    grunt.registerTask('bootstrap', ['less:bootstrap']);    
+    // build css
+    grunt.registerTask('css', ['less:development']);    
 
     // Unit testing - Karma - Jasmine
     grunt.registerTask('unit', ['karma:unit']);
