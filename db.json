@@ -1,64 +1,50 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "id": 2,
-      "title": "npm run json",
-      "author": "UnS"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "markers": [
-    {
-      "id": 1,
-      "latitude": 10.625517,
-      "longitude": 19.533691
-    },
-    {
-      "id": 2,
-      "latitude": 19.069906,
-      "longitude": 12.533691
-    },
-    {
-      "id": 3,
-      "latitude": 15.625517,
-      "longitude": 16.533691
-    }
-  ],
-  "gridData": [
-    {
-      "firstName": "Cox",
-      "lastName": "Carney",
-      "company": "Enormo",
-      "employed": true
-    },
-    {
-      "firstName": "Lorraine",
-      "lastName": "Wise",
-      "company": "Comveyer",
-      "employed": false
-    },
-    {
-      "firstName": "Nancy",
-      "lastName": "Waters",
-      "company": "Fuelton",
-      "employed": false
-    },
-    {
-      "firstName": "Rowena",
-      "lastName": "Pham",
-      "company": "Darling",
-      "employed": true
-    }
-  ]
+    "posts": [{
+        "id": 1,
+        "title": "json-server",
+        "author": "typicode"
+    }, {
+        "id": 2,
+        "title": "npm run json",
+        "author": "UnS"
+    }],
+    "comments": [{
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+    }],
+    "markers": [{
+        "id": 1,
+        "latitude": 10.625517,
+        "longitude": 19.533691
+    }, {
+        "id": 2,
+        "latitude": 19.069906,
+        "longitude": 12.533691
+    }, {
+        "id": 3,
+        "latitude": 15.625517,
+        "longitude": 16.533691
+    }],
+    "gridData": [{
+        "firstName": "Cox",
+        "lastName": "Carney",
+        "company": "Enormo",
+        "employed": true
+    }, {
+        "firstName": "Lorraine",
+        "lastName": "Wise",
+        "company": "Comveyer",
+        "employed": false
+    }, {
+        "firstName": "Nancy",
+        "lastName": "Waters",
+        "company": "Fuelton",
+        "employed": false
+    }, {
+        "firstName": "Rowena",
+        "lastName": "Pham",
+        "company": "Darling",
+        "employed": true
+    }]
 }

@@ -2,11 +2,13 @@
 * @Author: UnS
 * @Date:   2015-02-03 11:08:24
 * @Last Modified by:   UnS
-* @Last Modified time: 2015-02-09 16:39:52
+* @Last Modified time: 2015-03-27 11:31:00
 */
 
 define(['app'], function(app) {
-	app.controller('loginCtrl', ['$scope', '$timeout', '$location', 'AppData', function ($scope, $timeout, $location, AppData) {
+	app.controller('loginCtrl', 
+		['$scope', '$timeout', '$location', 'AppData', 
+		function ($scope, $timeout, $location, AppData) {
 		$scope.currentUser = AppData.getCurrentUser();
 		$scope.username = 'admin';
 		$scope.password = '123';

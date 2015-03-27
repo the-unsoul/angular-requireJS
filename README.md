@@ -7,7 +7,7 @@ note: pages which using JSON API won't work with github-pages. The sample only f
 ##### Author: UnS
 ##### Author's email: duylinh20032003@yahoo.com
 ##### Company: Elinext
-##### State: (Beta) 
+##### State: (Offical) 
 
 
 # Installation:
